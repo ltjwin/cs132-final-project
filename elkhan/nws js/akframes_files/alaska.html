@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 4.0::19970714::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<!-- saved from url=(0038)http://weather.noaa.gov/pd/alaska.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title>Alaska</title> <script language="JavaScript" src="states.js">
+    </script> 
+  <style type="text/css"></style></head> 
+  <body bgcolor="#FFFFFF" marginwidth="0" marginheight="0"><script language="JavaScript">
+	<!--
+   ZoneName = new Array()
+   ZoneName[0] = "Any Part of Alaska"	  
+   ZoneName[21] = "Glacier Bay incldg Gustavus"
+   ZoneName[22] = "Cape Fairweather to Cape Suckling Coastal Area incldg Yakutat"
+   ZoneName[23] = "Cape Decision to Cape Fairweather Coastal Area incldg Pelican - Sitka - Port Alexander"
+   ZoneName[24] = "Nrn Lynn Canal including Skagway and Haines"
+   ZoneName[25] = "Juneau Borough - Western Chichagof - Admiralty Island incldg Juneau - Hoonah - Angoon"
+   ZoneName[26] = "Inner channels,from Kupreanof Isl to Etolin Isl incldg Petersburg - Wrangell - Kake"
+   ZoneName[27] = "Srn inner channels incldg Ketchikan and Metlakatla"
+   ZoneName[28] = "Dixon Entrance to Cape Decision Coastal Area incldg Craig and Klawock"
+   ZoneName[29] = "Misty Fjords incldg Hyder"
+   ZoneName[101] = "Anchorage Municipality to Bird Creek incldg Glenn Hwy N to the First Knik Rvr Bridge" 
+   ZoneName[111] = "Matanuska Valley incldg Palmer - Wasilla - Glenn Hwy First Knik Rvr Bridge to Chickaloon"
+   ZoneName[121] = "Kenai Peninsula incldg Kenai - Soldotna - Homer - Sterling Highway"   
+   ZoneName[125] = "Wrn Prince William Sound and Kenai Mtns incldg Whittier - Girdwood - Seward"
+   ZoneName[131] = "NE Prince William Sound incldg Valdez - Richardson Hwy N through Thompson Pass"   
+   ZoneName[135] = "SE Prince William Sound incldg Cordova"   
+   ZoneName[141] = "Copper Rvr Basin incldg Glennallen - Glenn Hwy Chickaloon to Glennallen"
+   ZoneName[145] = "Susitna Valley incldg Talkeetna - Willow - Parks Hwy Houston to Denali Park Entrance"   
+   ZoneName[151] = "Kuskokwim Valley incldg McGrath"   
+   ZoneName[155] = "Kuskokwim Delta incldg Bethel"   
+   ZoneName[161] = "Bristol Bay incldg King Salmon - Naknek - Dillingham"   
+   ZoneName[171] = "Kodiak Island incldg Kodiak City"   
+   ZoneName[181] = "Alaska Peninsula incldg Cold Bay - Sand Point"   
+   ZoneName[185] = "Ern Aleutians incldg Unalaska"   
+   ZoneName[191] = "Wrn Aleutians incldg Adak"   
+   ZoneName[195] = "Pribilof Isl incldg St. Paul"   
+   ZoneName[201] = "Wrn Arctic Coast incldg Wainwright - Atqasuk - Point Lay"   
+   ZoneName[202] = "Nrn Arctic Coast incldg Barrow"   
+   ZoneName[203] = "Cntrl Beaufort Sea Coast incldg Prudhoe Bay - Deadhorse - Nuiqsut - Kuparuk"
+   ZoneName[204] = "Ern Beaufort Sea Coast incldg Kaktovik"   
+   ZoneName[205] = "Nrn Slopes of the Brooks Range from the Colville Rvr Westward incldg Umiat"   
+   ZoneName[206] = "Nrn Slopes of the Brooks Range E of the Colville Rvr incldg Anaktukuk Pass"
+   ZoneName[207] = "Chukchi Sea Coast incldg Point Hope - Kivalina - Shishmaref - Red Dog Port"   
+   ZoneName[208] = "Lower Kobuk and Noatak Valleys incldg Noatak - Kiana - Red Dog Mine"   
+   ZoneName[209] = "Baldwin Peninsula and Selawik Valley incldg Kotzebue - Selawik - Noorvik"   
+   ZoneName[210] = "Nrn and Interior Seward Peninsula incldg Buckland - Deering - Candle - Council"
+   ZoneName[211] = "Srn Seward Peninsula Coast incldg Nome - White Mtn - Golovin"   
+   ZoneName[212] = "Ern Norton Sound - Nulato Hills incldg Unalakleet - Stebbins - St. Michael"
+   ZoneName[213] = "St. Lawrence Isl - Bering Strait Coast incldg Gambell - Savoonga - Brevig Mission"
+   ZoneName[214] = "Yukon Delta incldg Emmonak - Mtn Village - Alakanuk - Pilot Station - Kotlik"
+   ZoneName[215] = "Lwr Yukon Valley incldg Marshall - Russian Mission - Holy Cross - Grayling"
+   ZoneName[216] = "Lwr Koyukuk and Middle Yukon Valleys incldg Galena - Nulato - Kaltag - Huslia"
+   ZoneName[217] = "Upper Kobuk and Noatak Valleys incldg Ambler - Shungnak - Kobuk"   
+   ZoneName[218] = "Srn Slopes of the Ern Brooks Range incldg Arctic Village - Wiseman - Coldfoot"
+   ZoneName[219] = "Upper Koyukuk Valley incldg Allakaket - Hughes - Bettles - Dalton Hwy Milepost 90 to 160"
+   ZoneName[220] = "Yukon Flats and Surndg Uplands incldg Fort Yukon - Venetie - Beaver - Stevens Village"
+   ZoneName[221] = "Wrn Tanana Valley and Yukon Valley Rampart to Lwr Nowitna Rvr incldg Anderson - Nenana"
+   ZoneName[222] = "Middle Tanana Valley incldg Fairbanks - Fort Wainwright - Eielson AFB - North Pole"
+   ZoneName[223] = "Tanana Rvr Flats incldg Delta Jnctn - Fort Greeley - Salcha - Dry Creek - Dot Lake"
+   ZoneName[224] = "Upper Tanana Valley and the Fortymile Country incldg Tok - Northway - Eagle - Tanacross"
+   ZoneName[225] = "Denali incldg Healy - Denali Natl Park - Kantishna"
+   ZoneName[226] = "NErn Slopes of the Ern Alaska Range incldg Mentasta Lake - Trims D.O.T. - Fielding Lake"
+   	//-->
+    </script> 
+    <p align="center"><font size="+1"><b>STATE </b></font>Warning, Forecast
+      &amp; Observation Selection Page <i>for</i><font size="+1"> ALASKA</font><br>
+      <nobr><font size="-1"><b>Select desired area(s) by map number(s) or use drop
+      down windows below</b> </font></nobr><br>
+      <img src="ak.jpg" alt="Alaska state map" width="751" height="443" usemap="#AlaskaUGCZ"> 
+      <map name="AlaskaUGCZ">
+        <area shape="POLY" coords="539,0,531,83,567,264,574,264,585,259,590,270,609,282,612,280,612,272,624,262,632,266,654,283,687,318,698,317,709,324,707,330,714,338,707,352,699,351,692,357,693,361,685,362,749,440,749,2,538,3,539,3" href="javascript:MainHelp()" alt="Canada">
+        <area shape="POLY" coords="227,1,340,104,340,87,340,84,356,84,365,78,367,72,377,60,388,59,400,51,409,50,421,39,433,47,435,53,450,53,453,60,468,58,479,66,485,63,489,65,493,63,502,68,511,60,531,73,537,1,536,1" href="javascript:MainHelp()" alt="Arctic Ocean">
+        <area shape="POLY" coords="487,195,487,205,490,209,504,208,511,213,532,218,547,228,552,229,558,232,557,225,546,221,535,213,535,211,526,205,525,202,513,201,498,194,487,193,487,195" href="javascript:DisplaySites(&#39;AKZ226&#39;)" alt="Zone 226" onmouseover="return StatusBar(226)">
+        <area shape="POLY" coords="448,209,454,223,485,207,487,207,487,194,474,195,455,207,447,208,448,209" href="javascript:DisplaySites(&#39;AKZ225&#39;)" alt="Zone 225" onmouseover="return StatusBar(225)">
+        <area shape="POLY" coords="542,145,525,157,518,167,503,168,503,185,524,200,526,205,534,211,543,217,544,221,557,226,542,145" href="javascript:DisplaySites(&#39;AKZ224&#39;)" alt="Zone 224" onmouseover="return StatusBar(224)">
+        <area shape="POLY" coords="477,185,476,194,490,193,497,195,516,201,524,201,520,196,504,185,478,185,477,185" href="javascript:DisplaySites(&#39;AKZ223&#39;)" alt="Zone 223" onmouseover="return StatusBar(223)">
+        <area shape="POLY" coords="479,169,480,177,479,186,484,185,499,185,504,186,502,169,497,167,479,167,479,169" href="javascript:DisplaySites(&#39;AKZ222&#39;)" alt="Zone 222" onmouseover="return StatusBar(222)">
+        <area shape="POLY" coords="435,169,427,185,432,193,438,202,446,195,444,204,447,208,455,207,472,195,476,195,480,176,479,168,467,168,454,163,441,171,436,170,435,169" href="javascript:DisplaySites(&#39;AKZ221&#39;)" alt="Zone 221" onmouseover="return StatusBar(221)">
+        <area shape="POLY" coords="475,133,470,145,461,153,454,164,467,167,495,167,507,168,518,166,523,164,527,155,543,144,537,116,508,123,494,132,475,132,475,133" href="javascript:DisplaySites(&#39;AKZ220&#39;)" alt="Zone 220" onmouseover="return StatusBar(220)">
+        <area shape="POLY" coords="473,133,450,133,432,139,426,141,417,151,422,158,435,169,442,170,454,163,461,153,469,145,474,133,473,133" href="javascript:DisplaySites(&#39;AKZ219&#39;)" alt="Zone 219" onmouseover="return StatusBar(219)">
+        <area shape="POLY" coords="434,119,433,130,425,142,432,138,449,133,475,132,494,132,508,123,531,118,537,117,531,91,512,88,490,101,481,101,471,111,435,120,434,119" href="javascript:DisplaySites(&#39;AKZ218&#39;)" alt="Zone 218" onmouseover="return StatusBar(218)">
+        <area shape="POLY" coords="387,102,386,131,385,135,395,149,401,146,417,151,434,130,434,120,422,118,422,115,401,105,388,101,387,102" href="javascript:DisplaySites(&#39;AKZ217&#39;)" alt="Zone 217" onmouseover="return StatusBar(217)">
+        <area shape="POLY" coords="395,148,393,158,391,165,387,170,378,199,397,199,401,205,400,225,412,215,428,208,437,202,432,191,426,187,435,169,428,161,421,158,418,151,404,148,394,149,393,148,395,148" href="javascript:DisplaySites(&#39;AKZ216&#39;)" alt="Zone 216" onmouseover="return StatusBar(216)">
+        <area shape="POLY" coords="381,197,358,223,349,228,344,249,384,239,391,235,399,226,402,205,398,199,379,199,381,197" href="javascript:DisplaySites(&#39;AKZ215&#39;)" alt="Zone 215" onmouseover="return StatusBar(215)">
+        <area shape="POLY" coords="349,211,343,210,339,205,331,204,325,215,309,230,310,234,318,238,327,237,330,243,343,249,350,227,343,224,348,214,346,210,344,210,340,203,331,205,332,205,349,211" href="javascript:DisplaySites(&#39;AKZ214&#39;)" alt="Zone 214" onmouseover="return StatusBar(214)">
+        <area shape="POLY" coords="270,176,265,184,269,188,275,186,284,200,289,197,293,199,296,194,285,188,285,184,283,182,275,182,271,180,272,176,269,176,270,176" href="javascript:DisplaySites(&#39;AKZ213&#39;)" alt="Zone 213" onmouseover="return StatusBar(213)">
+        <area shape="POLY" coords="331,149,314,148,315,153,321,157,318,163,324,170,329,161,331,148,331,149" href="javascript:DisplaySites(&#39;AKZ213&#39;)" alt="Zone 213" onmouseover="return StatusBar(213)">
+        <area shape="POLY" coords="387,171,379,199,356,223,347,227,343,223,349,212,348,209,353,202,349,201,353,198,357,203,365,203,367,200,365,195,369,192,366,183,371,181,370,176,364,178,358,181,350,187,351,182,365,173,365,169,389,169,388,169,387,171" href="javascript:DisplaySites(&#39;AKZ212&#39;)" alt="Zone 212" onmouseover="return StatusBar(212)">
+        <area shape="POLY" coords="327,169,325,169,322,171,325,175,333,179,341,177,347,178,349,180,352,185,352,177,347,175,336,175,331,172,327,170,323,168,327,169" href="javascript:DisplaySites(&#39;AKZ211&#39;)" alt="Zone 211" onmouseover="return StatusBar(211)">
+        <area shape="POLY" coords="331,149,328,160,326,169,330,173,334,175,346,175,350,174,352,174,354,176,355,179,363,173,365,168,388,170,391,164,394,152,393,148,370,149,366,152,357,148,332,149,331,149" href="javascript:DisplaySites(&#39;AKZ210&#39;)" alt="Zone 210" onmouseover="return StatusBar(210)">
+        <area shape="POLY" coords="355,125,365,125,372,131,376,131,378,135,387,137,393,148,367,147,366,137,361,135,360,129,356,127,357,126,355,125" href="javascript:DisplaySites(&#39;AKZ209&#39;)" alt="Zone 209" onmouseover="return StatusBar(209)">
+        <area shape="POLY" coords="345,92,345,98,358,113,358,125,366,125,370,129,374,129,377,132,377,136,387,136,385,132,386,128,387,101,367,103,345,92" href="javascript:DisplaySites(&#39;AKZ208&#39;)" alt="Zone 208" onmouseover="return StatusBar(208)">
+        <area shape="POLY" coords="312,148,351,148,351,144,354,136,345,134,330,140,318,146,314,147,314,148,312,148" href="javascript:DisplaySites(&#39;AKZ207&#39;)" alt="Zone 207" onmouseover="return StatusBar(207)">
+        <area shape="POLY" coords="342,87,339,94,334,97,339,99,341,103,353,115,355,125,357,125,356,114,355,111,345,99,345,88,341,88,342,87" href="javascript:DisplaySites(&#39;AKZ207&#39;)" alt="Zone 207" onmouseover="return StatusBar(207)">
+        <area shape="POLY" coords="453,72,455,84,440,92,439,99,433,113,434,119,469,112,476,109,480,104,491,100,511,88,532,91,531,78,503,74,490,75,475,79,458,70,454,72,453,72" href="javascript:DisplaySites(&#39;AKZ206&#39;)" alt="Zone 206" onmouseover="return StatusBar(206)">
+        <area shape="POLY" coords="347,91,365,102,387,100,423,114,423,117,428,119,433,120,433,111,439,98,439,92,454,85,453,72,447,70,442,65,425,66,393,69,385,72,379,73,372,84,359,89,348,92,347,91" href="javascript:DisplaySites(&#39;AKZ205&#39;)" alt="Zone 205" onmouseover="return StatusBar(205)">
+        <area shape="POLY" coords="487,68,490,74,501,73,530,77,530,73,511,63,501,70,494,67,489,68,487,68" href="javascript:DisplaySites(&#39;AKZ204&#39;)" alt="Zone 204" onmouseover="return StatusBar(204)">
+        <area shape="POLY" coords="442,55,444,67,449,70,458,71,465,72,475,77,489,75,488,68,480,67,472,65,468,61,463,63,461,61,455,64,451,62,453,60,448,60,450,55,444,55,442,55" href="javascript:DisplaySites(&#39;AKZ203&#39;)" alt="Zone 203" onmouseover="return StatusBar(203)">
+        <area shape="POLY" coords="410,54,415,58,414,68,427,65,443,67,443,54,432,55,432,49,418,41,415,44,414,48,409,52,408,52,410,54" href="javascript:DisplaySites(&#39;AKZ202&#39;)" alt="Zone 202" onmouseover="return StatusBar(202)">
+        <area shape="POLY" coords="411,52,408,53,399,52,387,61,376,62,369,71,365,80,357,85,344,85,348,89,358,89,373,82,378,74,389,70,414,67,414,58,409,53,408,53,411,52" href="javascript:DisplaySites(&#39;AKZ201&#39;)" alt="Zone 201" onmouseover="return StatusBar(201)">
+        <area shape="CIRCLE" coords="250,329,6" href="javascript:DisplaySites(&#39;AKZ195&#39;)" alt="Zone 195" onmouseover="return StatusBar(195)">
+        <area shape="CIRCLE" coords="246,315,6" href="javascript:DisplaySites(&#39;AKZ195&#39;)" alt="Zone 195" onmouseover="return StatusBar(195)">
+        <area shape="POLY" coords="16,315,24,337,37,331,26,319,22,315,15,315,16,315" href="javascript:DisplaySites(&#39;AKZ191&#39;)" alt="Zone 191" onmouseover="return StatusBar(191)">
+        <area shape="CIRCLE" coords="51,349,3" href="javascript:DisplaySites(&#39;AKZ191&#39;)" alt="Zone 191" onmouseover="return StatusBar(191)">
+        <area shape="POLY" coords="94,375,79,371,65,357,60,368,69,372,85,392,97,377,95,373,94,375" href="javascript:DisplaySites(&#39;AKZ191&#39;)" alt="Zone 191" onmouseover="return StatusBar(191)">
+        <area shape="POLY" coords="192,402,185,407,175,402,172,395,164,399,149,399,145,394,142,398,141,394,133,394,123,392,116,388,109,384,103,389,98,400,112,394,129,400,129,404,149,402,178,409,186,412,197,405,191,402,192,402" href="javascript:DisplaySites(&#39;AKZ191&#39;)" alt="Zone 191" onmouseover="return StatusBar(191)">
+        <area shape="POLY" coords="229,398,221,403,204,405,204,408,217,408,231,406,233,398,229,398" href="javascript:DisplaySites(&#39;AKZ191&#39;)" alt="Zone 191" onmouseover="return StatusBar(191)">
+        <area shape="POLY" coords="287,385,278,385,278,390,266,387,260,399,256,399,256,395,248,393,233,409,245,407,253,401,260,404,271,401,284,392,296,392,289,390,287,383,287,385" href="javascript:DisplaySites(&#39;AKZ185&#39;)" alt="Zone 185" onmouseover="return StatusBar(185)">
+        <area shape="POLY" coords="360,351,351,359,351,362,336,360,315,374,301,375,295,381,295,386,301,387,304,383,317,385,320,379,349,378,352,384,364,389,367,386,363,379,353,370,371,369,377,363,373,356,372,346,372,347,360,351" href="javascript:DisplaySites(&#39;AKZ181&#39;)" alt="Zone 181" onmouseover="return StatusBar(181)">
+        <area shape="POLY" coords="446,310,419,338,425,352,418,356,421,358,431,356,429,352,451,333,446,323,455,319,445,310,446,310" href="javascript:DisplaySites(&#39;AKZ171&#39;)" alt="Zone 171" onmouseover="return StatusBar(171)">
+        <area shape="POLY" coords="436,264,437,276,434,281,427,298,423,299,420,318,407,333,375,355,381,360,396,352,407,336,420,324,423,325,438,306,433,302,428,302,429,299,446,281,447,272,436,264" href="javascript:DisplaySites(&#39;AKZ171&#39;)" alt="Zone 171" onmouseover="return StatusBar(171)">
+        <area shape="POLY" coords="435,262,388,271,380,266,368,271,345,290,345,301,340,306,355,307,361,299,365,304,369,302,375,315,378,314,378,305,384,309,396,307,391,313,387,329,375,343,376,346,371,346,373,355,406,332,419,318,423,298,429,295,434,281,435,274,436,262,435,263,435,262" href="javascript:DisplaySites(&#39;AKZ161&#39;)" alt="Zone 161" onmouseover="return StatusBar(161)">
+        <area shape="POLY" coords="291,260,291,265,302,272,309,270,310,262,307,260,302,259,297,262,291,260" href="javascript:DisplaySites(&#39;AKZ155&#39;)" alt="Zone 155" onmouseover="return StatusBar(155)">
+        <area shape="POLY" coords="371,242,344,249,330,244,328,238,313,236,312,241,314,246,319,253,313,258,324,270,323,277,332,277,341,275,344,273,347,285,344,291,367,270,371,253,371,243,371,242" href="javascript:DisplaySites(&#39;AKZ155&#39;)" alt="Zone 155" onmouseover="return StatusBar(155)">
+        <area shape="POLY" coords="447,196,428,208,411,216,398,227,392,236,371,242,372,253,366,270,379,266,388,270,436,261,452,224,444,203,446,196,447,196" href="javascript:DisplaySites(&#39;AKZ151&#39;)" alt="Zone 151" onmouseover="return StatusBar(151)">
+        <area shape="POLY" coords="488,208,484,207,450,224,435,262,447,272,455,262,482,237,489,224,488,209,488,208" href="javascript:DisplaySites(&#39;AKZ145&#39;)" alt="Zone 145" onmouseover="return StatusBar(145)">
+        <area shape="POLY" coords="488,208,488,224,482,236,487,251,494,254,510,250,525,263,564,264,558,232,552,229,546,229,532,217,510,212,504,208,490,209,488,208" href="javascript:DisplaySites(&#39;AKZ141&#39;)" alt="Zone 141" onmouseover="return StatusBar(141)">
+        <area shape="POLY" coords="511,253,517,262,504,258,507,275,515,271,534,275,533,263,523,264,508,253,509,253,511,253" href="javascript:DisplaySites(&#39;AKZ135&#39;)" alt="Zone 135" onmouseover="return StatusBar(135)">
+        <area shape="POLY" coords="486,254,487,264,502,260,509,258,516,262,512,253,502,250,491,254,487,252,488,252,486,254" href="javascript:DisplaySites(&#39;AKZ131&#39;)" alt="Zone 131" onmouseover="return StatusBar(131)">
+        <area shape="POLY" coords="485,251,478,261,477,269,475,273,470,281,452,300,460,299,478,283,493,285,497,285,501,274,495,275,491,265,487,261,485,252,485,251" href="javascript:DisplaySites(&#39;AKZ125&#39;)" alt="Zone 125" onmouseover="return StatusBar(125)">
+        <area shape="POLY" coords="466,259,456,267,458,273,452,283,451,289,456,291,471,279,475,271,476,263,472,263,466,259" href="javascript:DisplaySites(&#39;AKZ121&#39;)" alt="Zone 121" onmouseover="return StatusBar(121)">
+        <area shape="POLY" coords="482,236,470,249,466,255,467,259,476,250,478,259,485,251,482,236,481,235,482,236" href="javascript:DisplaySites(&#39;AKZ111&#39;)" alt="Zone 111" onmouseover="return StatusBar(111)">
+        <area shape="POLY" coords="476,250,466,260,477,262,479,258,476,251,475,251,476,250" href="javascript:DisplaySites(&#39;AKZ101&#39;)" alt="Zone 101" onmouseover="return StatusBar(101)">
+        <area shape="POLY" coords="686,317,684,325,691,326,696,332,702,350,707,350,711,337,704,329,706,322,700,322,697,318,686,318,686,317" href="javascript:DisplaySites(&#39;AKZ029&#39;)" alt="Zone 29" onmouseover="return StatusBar(29)">
+        <area shape="POLY" coords="671,336,663,337,665,349,667,352,673,351,682,360,686,358,673,344,670,335,671,336" href="javascript:DisplaySites(&#39;AKZ028&#39;)" alt="Zone 28" onmouseover="return StatusBar(28)">
+        <area shape="POLY" coords="690,328,684,332,670,334,672,339,687,360,692,358,691,351,698,350,696,339,689,327,690,328" href="javascript:DisplaySites(&#39;AKZ027&#39;)" alt="Zone 27" onmouseover="return StatusBar(27)">
+        <area shape="POLY" coords="669,304,657,309,646,318,656,339,663,333,681,330,684,316,680,318,679,312,676,313,675,309,672,310,668,302,669,304" href="javascript:DisplaySites(&#39;AKZ026&#39;)" alt="Zone 26" onmouseover="return StatusBar(26)">
+        <area shape="POLY" coords="640,279,634,287,634,294,626,300,646,320,654,310,669,302,651,287,652,285,640,278,640,279" href="javascript:DisplaySites(&#39;AKZ025&#39;)" alt="Zone 25" onmouseover="return StatusBar(25)">
+        <area shape="POLY" coords="623,264,615,270,614,274,615,277,624,278,634,285,639,277,634,273,631,272,629,267,622,264,623,264" href="javascript:DisplaySites(&#39;AKZ024&#39;)" alt="Zone 24" onmouseover="return StatusBar(24)">
+        <area shape="POLY" coords="606,284,602,291,612,298,620,300,620,304,652,338,648,325,620,295,606,288,606,284" href="javascript:DisplaySites(&#39;AKZ023&#39;)" alt="Zone 23" onmouseover="return StatusBar(23)">
+        <area shape="POLY" coords="533,264,535,276,546,273,555,273,565,278,573,277,579,273,577,282,593,285,603,290,606,285,604,280,590,272,589,269,583,268,584,261,579,262,575,266,564,266,533,264" href="javascript:DisplaySites(&#39;AKZ022&#39;)" alt="Zone 22" onmouseover="return StatusBar(22)">
+        <area shape="POLY" coords="615,278,607,289,622,296,635,293,624,277,615,278,613,278,615,278" href="javascript:DisplaySites(&#39;AKZ021&#39;)" alt="Zone 21" onmouseover="return StatusBar(21)">
+        <area shape="POLY" coords="1,1,1,440,746,440,673,353,663,353,661,340,654,341,645,335,610,300,592,287,576,285,575,279,564,281,552,275,536,279,516,275,507,278,505,277,500,288,480,286,454,304,447,298,449,289,447,285,434,299,441,305,409,339,397,356,378,365,370,372,361,373,371,385,360,393,350,387,347,381,321,383,319,387,306,386,296,391,291,381,298,372,312,372,335,357,348,357,357,348,370,343,385,329,390,311,381,311,373,317,367,306,356,308,354,311,334,308,342,298,342,276,340,279,321,280,320,270,310,258,315,252,305,229,337,199,345,207,350,195,362,198,365,190,362,183,348,189,348,182,341,179,328,184,315,165,315,157,309,146,350,131,356,137,355,146,364,148,364,140,351,120,349,113,226,2,1,1" href="javascript:MainHelp()" alt="Pacific Ocean" onmouseover="javascript:StatusClear()"> 
+      </map> </p> 
+    <center> 
+      <table width="50%"> 
+        <caption><b>Finding your WARNINGs &amp; FORECASTs through name
+          selection</b></caption> 
+        <tbody><tr> 
+          <td width="534"> 
+            <form name="DropDown1"> 
+              <p> 
+                <select name="Zones" onchange="DisplayStrings(1)"> 
+                  <option value="ALASKAZ999" selected="SELECTED">Select by Area
+                    Name</option> 
+                  <option value="AKZ181">Alaska Peninsula incldg Cold Bay -
+                    Sand Point</option> 
+                  <option value="AKZ101">Anchorage Municipality to Bird Creek
+                    incldg Glenn Hwy N to the First Knik Rvr Bridge</option> 
+                  <option value="AKZ209">Baldwin Peninsula and Selawik Valley
+                    incldg Kotzebue - Selawik - Noorvik</option> 
+                  <option value="AKZ161">Bristol Bay incldg King Salmon -
+                    Naknek - Dillingham</option> 
+                  <option value="AKZ023">Cape Decision to Cape Fairweather
+                    Coastal Area incldg Pelican - Sitka - Port Alexander</option> 
+                  <option value="AKZ022">Cape Fairweather to Cape Suckling
+                    Coastal Area incldg Yakutat</option> 
+                  <option value="AKZ207">Chukchi Sea Coast incldg Point Hope -
+                    Kivalina - Shishmaref - Red Dog Port</option> 
+                  <option value="AKZ203">Cntrl Beaufort Sea Coast incldg
+                    Prudhoe Bay - Deadhorse - Nuiqsut - Kuparuk</option> 
+                  <option value="AKZ141">Copper Rvr Basin incldg Glennallen -
+                    Glenn Hwy Chickaloon to Glennallen</option> 
+                  <option value="AKZ225">Denali incldg Healy - Denali Natl Park
+                    - Kantishna</option> 
+                  <option value="AKZ028">Dixon Entrance to Cape Decision
+                    Coastal Area incldg Craig and Klawock</option> 
+                  <option value="AKZ185">Ern Aleutians incldg Unalaska</option>
+                  
+                  <option value="AKZ204">Ern Beaufort Sea Coast incldg
+                    Kaktovik</option> 
+                  <option value="AKZ212">Ern Norton Sound - Nulato Hills incldg
+                    Unalakleet - Stebbins - St. Michael</option> 
+                  <option value="AKZ021">Glacier Bay incldg Gustavus</option> 
+                  <option value="AKZ026">Inner channels,from Kupreanof Isl to
+                    Etolin Isl incldg Petersburg - Wrangell - Kake</option> 
+                  <option value="AKZ025">Juneau Borough - Western Chichagof -
+                    Admiralty Island incldg Juneau - Hoonah - Angoon</option> 
+                  <option value="AKZ121">Kenai Peninsula incldg Kenai -
+                    Soldotna - Homer - Sterling Highway</option> 
+                  <option value="AKZ171">Kodiak Island incldg Kodiak
+                    City</option> 
+                  <option value="AKZ155">Kuskokwim Delta incldg Bethel</option>
+                  
+                  <option value="AKZ151">Kuskokwim Valley incldg
+                    McGrath</option> 
+                  <option value="AKZ208">Lwr Kobuk and Noatak Valleys incldg
+                    Noatak - Kiana - Red Dog Mine</option> 
+                  <option value="AKZ216">Lwr Koyukuk and Middle Yukon Valleys
+                    incldg Galena - Nulato - Kaltag - Huslia</option> 
+                  <option value="AKZ215">Lwr Yukon Valley incldg Marshall -
+                    Russian Mission - Holy Cross - Grayling</option> 
+                  <option value="AKZ111">Matanuska Valley incldg Palmer -
+                    Wasilla - Glenn Hwy First Knik Rvr Bridge to Chickaloon</option> 
+                  <option value="AKZ222">Middle Tanana Valley incldg Fairbanks
+                    - Fort Wainwright - Eielson AFB - North Pole</option> 
+                  <option value="AKZ029">Misty Fjords incldg Hyder</option> 
+                  <option value="AKZ131">NE Prince William Sound incldg Valdez
+                    - Richardson Hwy N through Thompson Pass</option> 
+                  <option value="AKZ226">NErn Slopes of the Ern Alaska Range
+                    incldg Mentasta Lake - Trims D.O.T. - Fielding Lake</option> 
+                  <option value="AKZ210">Nrn and Interior Seward Peninsula
+                    incldg Buckland - Deering - Candle - Council</option> 
+                  <option value="AKZ202">Nrn Arctic Coast incldg
+                    Barrow</option> 
+                  <option value="AKZ024">Nrn Lynn Canal incldg Skagway and
+                    Haines</option> 
+                  <option value="AKZ206">Nrn Slopes of the Brooks Range E of
+                    the Colville Rvr incldg Anaktukuk Pass</option> 
+                  <option value="AKZ205">Nrn Slopes of the Brooks Range from
+                    the Colville Rvr Westward incldg Umiat</option> 
+                  <option value="AKZ195">Pribilof Isl incldg St. Paul</option> 
+                  <option value="AKZ135">SE Prince William Sound incldg
+                    Cordova</option> 
+                  <option value="AKZ027">Srn inner channels incldg Ketchikan
+                    and Metlakatla</option> 
+                  <option value="AKZ211">Srn Seward Peninsula Coast incldg Nome
+                    - White Mtn - Golovin</option> 
+                  <option value="AKZ218">Srn Slopes of the Ern Brooks Range
+                    incldg Arctic Village - Wiseman - Coldfoot</option> 
+                  <option value="AKZ213">St. Lawrence Isl - Bering Strait Coast
+                    incldg Gambell - Savoonga - Brevig Mission</option> 
+                  <option value="AKZ145">Susitna Valley incldg Talkeetna -
+                    Willow - Parks Hwy Houston to Denali Park Entrance</option> 
+                  <option value="AKZ223">Tanana Rvr Flats incldg Delta Jnctn -
+                    Fort Greeley - Salcha - Dry Creek - Dot Lake</option> 
+                  <option value="AKZ217">Upper Kobuk and Noatak Valleys incldg
+                    Ambler - Shungnak - Kobuk</option> 
+                  <option value="AKZ219">Upper Koyukuk Valley incldg Allakaket
+                    - Hughes - Bettles - Dalton Hwy Milepost 90 to 160</option> 
+                  <option value="AKZ224">Upper Tanana Valley and the Fortymile
+                    Country incldg Tok - Northway - Eagle - Tanacross</option> 
+                  <option value="AKZ191">Wrn Aleutians incldg Adak</option> 
+                  <option value="AKZ201">Wrn Arctic Coast incldg Wainwright -
+                    Atqasuk - Point Lay</option> 
+                  <option value="AKZ125">Wrn Prince William Sound and Kenai
+                    Mtns incldg Whittier - Girdwood - Seward</option> 
+                  <option value="AKZ221">Wrn Tanana Valley and Yukon Valley
+                    Rampart to Lwr Nowitna Rvr incldg Anderson - Nenana</option> 
+                  <option value="AKZ214">Yukon Delta incldg Emmonak - Mtn
+                    Village - Alakanuk - Pilot Station - Kotlik</option> 
+                  <option value="AKZ220">Yukon Flats and Surndg Uplands incldg
+                    Fort Yukon - Venetie - Beaver - Stevens Village</option> 
+                </select></p></form></td> 
+          <td width="281"> 
+            <form name="DropDown2"> 
+              <p> 
+                <select name="Cities" size="1" onchange="DisplayStrings(2)"> 
+                  <option value="ALASKAZ999" selected="SELECTED">Select by City Name</option> 
+                  <option value="AKZ191">Aleutian Islands</option> 
+                  <option value="AKZ101">Anchorage</option>                   
+                  <option value="AKZ206">Arctic Village</option>          
+                  <option value="AKZ202">Barrow</option> 
+                  <option value="AKZ155">Bethel</option> 
+                  <option value="AKZ218">Bettles Field</option> 
+                  <option value="AKZ181">Chignik</option> 
+                  <option value="AKZ135">Cordova</option>                   
+                  <option value="AKZ028">Craig</option> 
+                  <option value="AKZ226">Delta Junction</option> 
+                  <option value="AKZ185">Dutch Harbor</option> 
+                  <option value="AKZ224">Eagle</option>                   
+                  <option value="AKZ222">Fairbanks</option> 
+                  <option value="AKZ220">Fort Yukon</option> 
+                  <option value="AKZ141">Glennallen</option> 
+                  <option value="AKZ024">Haines</option> 
+                  <option value="AKZ215">Holy Cross</option>                   
+                  <option value="AKZ025">Juneau</option> 
+                  <option value="AKZ204">Kaktovik</option> 
+                  <option value="AKZ121">Kenai</option> 
+                  <option value="AKZ029">Ketchikan</option> 
+                  <option value="AKZ208">Kiana</option> 
+                  <option value="AKZ181">King Cove</option> 
+                  <option value="AKZ207">Kivaling</option> 
+                  <option value="AKZ161">King Salmon</option>                                                                         
+                  <option value="AKZ171">Kodiak</option> 
+                  <option value="AKZ209">Kotzebue</option> 
+                  <option value="AKZ210">Koyuk</option> 
+                  <option value="AKZ214">Mtn. Village</option> 
+                  <option value="AKZ185">Nikolski</option>                                                       
+                  <option value="AKZ211">Nome</option> 
+                  <option value="AKZ026">Petersburg</option> 
+                  <option value="AKZ203">Prudhoe Bay</option> 
+                  <option value="AKZ216">Ruby</option> 
+                  <option value="AKZ213">Saint Lawrence Island</option>                   
+                  <option value="AKZ195">Saint Paul Island</option> 
+                  <option value="AKZ125">Seldovia</option> 
+                  <option value="AKZ207">Shishmaref</option> 
+                  <option value="AKZ217">Shungnak</option>                                     
+                  <option value="AKZ023">Sitka</option> 
+                  <option value="AKZ151">Sleetmute</option> 
+                  <option value="AKZ223">Suntrana</option> 
+                  <option value="AKZ213">Teller</option>                                                       
+                  <option value="AKZ145">Talkeetna</option> 
+                  <option value="AKZ221">Tanana</option>                   
+                  <option value="AKZ205">Umiat</option> 
+                  <option value="AKZ212">Unalakleet</option> 
+                  <option value="AKZ131">Valdez</option> 
+                  <option value="AKZ201">Wainwright</option>                   
+                  <option value="AKZ022">Yakutat</option> 
+                </select></p></form></td> 
+        </tr> 
+      </tbody></table></center> 
+    <p><font size="-1"><img src="noaaball.gif" width="40" height="54" border="0" align="left">Page Author :
+      <a href="http://weather.noaa.gov/isginfo.html" target="_top">OOS/TOC Internet
+      Services Group</a><br> National Weather Service<br> Last Modified : Thursday, Sep
+      20, 2001 <br> URL : http://weather.noaa.gov/pd/akframes.html</font></p> 
+</body></html>
