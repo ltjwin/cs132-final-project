@@ -3,6 +3,7 @@ DESC: javascript common to all state HTML files in the NAWRS site.
 
 PLATFORMS: all client side systems using browsers which accept Javascript 1.3
 ====================================================================== */
+
      MaxIndex = 30;
      StatusBarLocked = 0;
      
