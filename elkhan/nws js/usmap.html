@@ -188,11 +188,10 @@
 		<!-- <center><h3>Nationwide "Area Weather" Retrieval System (NAWRS)</h3></center> -->
 
 		<div id="Page2" class="col-lg-6">
-			<h2 class="text-center"> The Sub-Map</h2>
-			<iframe id="state_pic" frameBorder="0" visibility="hidden" scrolling="no">
+			<h2 class="text-center"> State Map</h2>
+			<center><iframe id="state_pic" frameBorder="0" visibility="hidden" scrolling="no"> </center>
 			</iframe>
 		</div>
-	</div>
 	<div class="container">
 	</div>
 
@@ -222,11 +221,13 @@
 		</div>
 		<div class="col-lg-3"></div>
 	</div>
+
 	<div class="row">
 		<div class="col-lg-3"></div>
-		<div class="col-lg-6">
-			<table border="1" id="table" style="width:100%">
-				<tr>
+		<!-- <div class="col-lg-6"> -->
+			<center>
+				<table border="1" id="table" style="width:95%">
+				<!-- <tr>
 					<th>Date</th>
 					<th>Warning</th>		
 					<th>Text File</th>
@@ -245,6 +246,121 @@
 					<td>06/02/13</td>
 					<td>1</td> 
 					<td><u>Download</u></td>
+				</tr> -->
+			</table>
+		</center>
+		<div class="col-lg-3"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-6">
+			<br> </br>
+				<table border="1" id="table2" style="width:100%">
+				<tr>
+					<th>Date</th>
+					<th>Warning</th>		
+					<th>Text File</th>
+				</tr>
+				<tr>
+					<td>06/11/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/12/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/13/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/14/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/15/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/16/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/17/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/18/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/19/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/20/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/21/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/22/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/23/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/24/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/25/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/26/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/27/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/28/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/29/03</td>
+					<td>0</td> 
+					<td><u>Download</u></td>
+				</tr>
+				<tr>
+					<td>06/30/03</td>
+					<td>1</td> 
+					<td><u>Download</u></td>
 				</tr>
 			</table>
 			<br/>
@@ -254,6 +370,129 @@
 	</div>
 
 </body>
+<script>
+var startday = 11;
+var startmonth = 6;
+var startyear = 2003;
+var currentyear = startyear;
+var endday = 29;
+var endmonth = 11;
+var endyear = 2006;
+
+function isValidDay(monthnumber, day) {
+      if (monthnumber === 2 && parseInt(day) > 28) {
+         if (parseInt(currentyear % 4) === 0 && day === 29) {
+         	return true;
+         }
+         return false;
+	  }
+      else if (monthnumber === 4 && day === 31) {
+      		return false;
+      }
+       else if (monthnumber === 6 && day === 31) {
+      		return false;
+      }
+       else if (monthnumber === 9 && day === 31) {
+      		return false;
+      }
+       else if (monthnumber === 11 && day === 31) {
+      		return false;
+      }
+      
+      return true;
+}
+
+function makeSampleArray(numofdays) {
+	  var dayarray = new Array(numofdays);
+      for (i = 0; i < numofdays; i++) {
+          if (i % 2 === 0) {
+	      dayarray[i] = 0;
+          }
+          else {
+              dayarray[i] = 1;
+          }
+         
+      }
+   
+      return dayarray;
+}
+
+
+
+function numberToMonth(monthnumber) {
+     if (monthnumber === 1) 
+             return "January";
+     if (monthnumber === 2) 
+             return "February";
+     if (monthnumber === 3) 
+             return "March";
+     if (monthnumber === 4) 
+             return "April";
+     if (monthnumber === 5) 
+             return "May";
+     if (monthnumber === 6) 
+             return "June";
+     if (monthnumber === 7) 
+             return "July";
+     if (monthnumber === 8) 
+             return "August";
+     if (monthnumber === 9) 
+             return "September";
+     if (monthnumber === 10) 
+             return "October";
+     if (monthnumber === 11) 
+             return "November";
+     if (monthnumber === 0) 
+             return "December";
+}
+window.onload = function WindowLoad(event) {
+    var mytable = document.getElementById("table");
+    	var row = table.insertRow(0);
+    	var cellArray = new Array(31);
+    	for (i = 0; i < 31; i++) {
+       		var cell1 = row.insertCell(i);
+            if (i < 9)
+            	cell1.innerHTML = "0" + parseInt(i + 1);
+            else {
+				cell1.innerHTML = "" + parseInt(i + 1);
+  			}
+   		}
+    	var cell1 = row.insertCell(0);
+        var count = 1;
+        var daycount = 0;
+        var daydata = makeSampleArray(1268);
+        for (j = 6; j < 48; j++) {
+        	var row = mytable.insertRow(count);
+            var month = parseInt(j % 12);
+            count++;
+            row.innerHTML = "" + numberToMonth(month) + " " + currentyear;
+            for (i = 0; i < 31; i++) {
+       			var cell1 = row.insertCell(i);
+       			if (isValidDay(month, parseInt(i+1)) === false) {
+                   cell1.style.backgroundColor = "white";
+                }
+                else if (month === startmonth && parseInt(i+1) < startday && currentyear === startyear) {
+                    cell1.style.backgroundColor = "white";
+                }
+                else if (month === endmonth && parseInt(i+1) > endday && currentyear === endyear) {
+                    cell1.style.backgroundColor = "white";
+                }
+                else {
+                    if (daydata[daycount] === 1) {
+					     cell1.style.backgroundColor = "red";
+                    }
+                    else {
+                         cell1.style.backgroundColor = "blue";
+                    }
+                    daycount++;
+                }
+   			}
+            if (month === 0) {
+               currentyear = parseInt(currentyear + 1);
+            }
+        }
+}
+</script>
 <script>
 $(window).load(function() {
 	$('.state').click(function (event) { 
