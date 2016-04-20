@@ -6,7 +6,9 @@ PLATFORMS: all client side systems using browsers which accept Javascript 1.3
 
 
 
-window.addEventListener('load', function() {
+//window.addEventListener('load', function() {
+//$( window ).load(function() {  
+$(document).ready(function() {
   $('.state').click(function (event) { 
     event.preventDefault(); 
     var url = $(this).attr('href');
