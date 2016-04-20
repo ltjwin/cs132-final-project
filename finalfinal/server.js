@@ -22,7 +22,9 @@ app.set('views', __dirname); // tell Express where to find templates
 
 //Returns sourceText
 function findWarning(countyCode, date, warningType, warnings, res, currentIndex, lastIndex){
+    console.log(date +  "%"+warningType+"%"+ countyCode+"\n")
     conn.query('SELECT * FROM warningInfo1 AS w1 JOIN (SELECT info1_id, effective_date, warning_type, cancellation, location FROM warningInfo2 WHERE effective_date=$1 AND warning_type LIKE $2 AND location=$3) AS w2 ON w1.info1_id = w2.info1_id;',  [date, "%"+warningType+"%", countyCode], function(error, result) {
+        
         if (error) {
             console.log("error found during querying: " + error);
             if (currentIndex===lastIndex){
@@ -31,7 +33,9 @@ function findWarning(countyCode, date, warningType, warnings, res, currentIndex,
             }
         } else{
             console.log("inputted date: " + date);
+            
             if (result.rows[0]===undefined){
+            //if (typeof result !== 'undefined' && result.rows.length > 0){
                 //no warning exists, output 0 as Boolean value
                 console.log("No such warning exists!");
                 var warning = {};
@@ -53,9 +57,10 @@ function findWarning(countyCode, date, warningType, warnings, res, currentIndex,
             } else{
                 console.log("Such a warning Exists!");
                 var sourceText;
+                console.log("sourceText: "+result.rows[0])
                 for (i = 0; i < result.rows.length; i++){
                     sourceText = sourceText + "Source " + (i+1) +": \n" + result.rows[i].source_text + "\n\n";
-
+                    console.log("sourceText: "+sourceText)
                 }
                 var warning = {};
                 warning['date'] = date;
@@ -95,7 +100,7 @@ app.get("/findWarning/:warningType/:countyCode/:startDate/:endDate", function(re
     console.log("DiffDays: "+ diffDays);
     var warnings = [];
     for (i=0; i<=diffDays; i++){
-        var effectiveDateM = moment(req.params.startDate, 'MM-DD-YYYY');
+        var effectiveDateM = moment(req.params.startDate, 'YYYY-MM-DD');
         findWarning(req.params.countyCode, effectiveDateM.add(i, 'day').format('YYYY-MM-DD'), req.params.warningType, warnings, res, i, diffDays);        
     }
 

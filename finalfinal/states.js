@@ -4,86 +4,9 @@ DESC: javascript common to all state HTML files in the NAWRS site.
 PLATFORMS: all client side systems using browsers which accept Javascript 1.3
 ====================================================================== */
 
-
-
-//window.addEventListener('load', function() {
-//$( window ).load(function() {  
-$(document).ready(function() {
-  $('.state').click(function (event) { 
-    event.preventDefault(); 
-    var url = $(this).attr('href');
-    var ID=document.getElementById('state_pic');
-    ID.src = url;
-    ID.style.visibility='visible';
-    newheight = 600;//ID.contentWindow.document.body.scrollHeight;
-    newwidth = 600;//ID.contentWindow.document.body.scrollWidth;
-    ID.height = (newheight) + "px";
-    ID.width = (newwidth) + "px";
-    //console.log(url);
-    // $.get(url, function(data) {
-    //     alert(data);
-    // });
-  });
-
-  var submitButton = $('#submitButtonID2')[0];
-  //console.log(countyCode);
-  submitButton.addEventListener('click', sendQuery, false);
-
-
-function sendQuery() {
-  //console.log("cCode: " + cCode);
-  console.log("Inside Send Query");
-  // get the parameters for query
-  
-  var warningType = "heat";
-  console.log("warningType: " + warningType);
-
-  //console.log("Inside sendQuery countyCode: " + countyCode);
-  
-  //In MM/DD/YYYY format
-  var startDate = $('#begin_date').val();
-  console.log("startDate: " + startDate);
-  var endDate = $('#end_date').val();
-  console.log("endDate: " + endDate);
-  console.log("countyCode: " + $('#countyCode').val());
-
-  if (warningType!== "" && $('#countyCode').val()!=="" && startDate!=="" && endDate!==""){
-    console.log("We got a valid user input");
-    // create a request object
-    var request = new XMLHttpRequest();
-    // specify the HTTP method, URL, and asynchronous flag
-    request.open('GET', '/findWarning/' + warningType + '/' + $('#countyCode').val() + '/' + startDate + '/' + endDate, true);
-    request.addEventListener('load', function(e){
-    
-      // inside your Ajax response handler
-      if (request.status == 200){
-        var content = request.responseText;
-        var data = JSON.parse(content);
-
-        // we have a list of Query results by different dates
-        console.log("length of content: " + data.length);
-        //console.log("data: " + data);
-
-        for (i = 0; i < data.length; i++) {
-          var date = data[i].date;
-          var warning = data[i].warning;
-          var text = data[i].text;
-          console.log("date: "+date);
-          console.log("warning: "+warning);
-          console.log("text: " + text);
-        }
-      } else {
-        console.log('Something went wrong, check the request status');
-      }
-    });
-    
-    request.send(null);
-  }
-}
-
 MaxIndex = 30;
 StatusBarLocked = 0;
-//var countyCode="";
+var countyCode = -1;
 
 function DisplaySites(string)   {
   console.log("DisplaySites function");
@@ -149,9 +72,13 @@ function DisplaySites(string)   {
   }
   
   console.log("totalString: "+totalString);
-  var countyCode=totalString.substring(totalString.indexOf(":")+1);
+  countyCode=totalString.substring(totalString.indexOf(":")+1);
+  localStorage.setItem("countyCodeCookie", countyCode);
   console.log("Inside Displaysites countyCode: " + countyCode);
-  $('#countyCode').text(countyCode);
+  // $('#countyCodeHidden').text(countyCode);
+  // $('#countyCodeHidden').val(countyCode);
+  // var par =document.getElementById('countyCodeHidden');
+  // par.innerHTML = countyCode
   var temp = $('#countyCode').val();
   console.log("get text from html: " + temp);
         
@@ -184,6 +111,85 @@ function DisplayStrings(flag)  {
     }
   }
 }
+
+//window.addEventListener('load', function() {
+//$( window ).load(function() {  
+$(document).ready(function() {
+        $('.state').click(function (event) { 
+          event.preventDefault(); 
+          var url = $(this).attr('href');
+          var ID=document.getElementById('state_pic');
+          ID.src = url;
+          ID.style.visibility='visible';
+          newheight = 600;//ID.contentWindow.document.body.scrollHeight;
+          newwidth = 600;//ID.contentWindow.document.body.scrollWidth;
+          ID.height = (newheight) + "px";
+          ID.width = (newwidth) + "px";
+          //console.log(url);
+          // $.get(url, function(data) {
+          //     alert(data);
+          // });
+        });
+
+        var submitButton = $('#submitButtonID2')[0];
+        //console.log(countyCode);
+        submitButton.addEventListener('click', sendQuery, false);
+
+
+      function sendQuery() {
+            //console.log("cCode: " + cCode);
+            console.log("Inside Send Query");
+            // get the parameters for query
+            
+            var warningType = "frost";
+            console.log("warningType: " + warningType);
+
+            //console.log("Inside sendQuery countyCode: " + countyCode);
+            
+            //In YYYY-MM-DD format
+            var startDate = $('#begin_date').val();
+            console.log("startDate: " + startDate);
+            var endDate = $('#end_date').val();
+            console.log("endDate: " + endDate);
+            console.log("countyCode: " + $('#countyCode').val());
+            
+            var cookieValue = localStorage.getItem("countyCodeCookie");
+            console.log("cookieValue: " + cookieValue);
+            if (warningType!== "" && $('#countyCode').val()!=="" && startDate!=="" && endDate!==""){
+              console.log("We got a valid user input");
+              // create a request object
+              var request = new XMLHttpRequest();
+              // specify the HTTP method, URL, and asynchronous flag
+              request.open('GET', '/findWarning/' + warningType + '/' + cookieValue + '/' + startDate + '/' + endDate, true); //$('#countyCode').val()
+              request.addEventListener('load', function(e){
+              
+                // inside your Ajax response handler
+                if (request.status == 200){
+                  var content = request.responseText;
+                  var data = JSON.parse(content);
+
+                  // we have a list of Query results by different dates
+                  console.log("length of content: " + data.length);
+                  //console.log("data: " + data);
+
+                  for (i = 0; i < data.length; i++) {
+                    var date = data[i].date;
+                    var warning = data[i].warning;
+                    var text = data[i].text;
+                    console.log("date: "+date);
+                    console.log("warning: "+warning);
+                    console.log("text: " + text);
+                  }
+                } else {
+                  console.log('Something went wrong, check the request status');
+                }
+              });
+              
+              request.send(null);
+            }
+      }
+
+
    
 });
 
