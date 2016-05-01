@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 4.0::19970714::extensions to HTML 4.0//EN" "hmpro4.dtd">
+<!-- saved from url=(0037)http://weather.noaa.gov/pd/texas.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+	 <title>Texas</title> 
+	 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+	 <script language="JavaScript" src="../states.js"></script> 
+  <style type="text/css"></style></head> 
+  <body bgcolor="#FFFFFF" marginwidth="0" marginheight="0"> <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> <script language="JavaScript">
+   <!--
+     ZoneName = new Array()
+     ZoneName[0] = "Any Part of Texas"
+ZoneName[1] = "Dallam"
+ZoneName[2] = "Sherman"
+ZoneName[3] = "Hansford"
+ZoneName[4] = "Ochiltree"
+ZoneName[5] = "Lipscomb"
+ZoneName[6] = "Hartley"
+ZoneName[7] = "Moore"
+ZoneName[8] = "Hutchinson"
+ZoneName[9] = "Roberts"
+ZoneName[10] = "Hemphill"
+ZoneName[11] = "Oldham"
+ZoneName[12] = "Potter"
+ZoneName[13] = "Carson"
+ZoneName[14] = "Gray"
+ZoneName[15] = "Wheeler"
+ZoneName[16] = "Deaf Smith"
+ZoneName[17] = "Randall"
+ZoneName[18] = "Armstrong"
+ZoneName[19] = "Donley"
+ZoneName[20] = "Collingsworth"
+ZoneName[21] = "Parmer"
+ZoneName[22] = "Castro"
+ZoneName[23] = "Swisher"
+ZoneName[24] = "Briscoe"
+ZoneName[25] = "Hall"
+ZoneName[26] = "Childress"
+ZoneName[27] = "Bailey"
+ZoneName[28] = "Lamb"
+ZoneName[29] = "Hale"
+ZoneName[30] = "Floyd"
+ZoneName[31] = "Motley"
+ZoneName[32] = "Cottle"
+ZoneName[33] = "Cochran"
+ZoneName[34] = "Hockley"
+ZoneName[35] = "Lubbock"
+ZoneName[36] = "Crosby"
+ZoneName[37] = "Dickens"
+ZoneName[38] = "King"
+ZoneName[39] = "Yoakum"
+ZoneName[40] = "Terry"
+ZoneName[41] = "Lynn"
+ZoneName[42] = "Garza"
+ZoneName[43] = "Kent"
+ZoneName[44] = "Stonewall"
+ZoneName[45] = "Gaines"
+ZoneName[46] = "Dawson"
+ZoneName[47] = "Borden"
+ZoneName[48] = "Scurry"
+ZoneName[49] = "Fisher"
+ZoneName[50] = "Andrews"
+ZoneName[51] = "Martin"
+ZoneName[52] = "Howard"
+ZoneName[53] = "Mitchell"
+ZoneName[54] = "Nolan"
+ZoneName[55] = "El Paso"
+ZoneName[56] = "Hudspeth"
+ZoneName[57] = "Van Horn and Hwy 54 Corridor / Culberson / Except NE, Extr SE and Extr NE"
+ZoneName[58] = "Reeves County and Upper Trans Pecos / Except Extr SW / NE Culberson"
+ZoneName[59] = "Loving"
+ZoneName[60] = "Winkler"
+ZoneName[61] = "Ector"
+ZoneName[62] = "Midland"
+ZoneName[63] = "Glasscock"
+ZoneName[64] = "Sterling"
+ZoneName[65] = "Coke"
+ZoneName[66] = "Runnels"
+ZoneName[67] = "Ward"
+ZoneName[68] = "Crane"
+ZoneName[69] = "Upton"
+ZoneName[70] = "Reagan"
+ZoneName[71] = "Irion"
+ZoneName[72] = "Tom Green"
+ZoneName[73] = "Concho"
+ZoneName[74] = "Davis/Apache Mtns Area/Extr SW Reeves/Extr SE Culberson/NW Brewster/Jeff Davis/Except W"
+ZoneName[75] = "Pecos County"
+ZoneName[76] = "Crockett"
+ZoneName[77] = "Schleicher"
+ZoneName[78] = "Sutton"
+ZoneName[79] = "Presidio Valley, Extreme Western Presidio"
+ZoneName[80] = "Marfa Plateau, Presidio (except extreme W), W Jeff Davis"
+ZoneName[81] = "Big Bend Area, Brewster (except NW)"
+ZoneName[82] = "Terrell County"
+ZoneName[83] = "Hardeman"
+ZoneName[84] = "Foard"
+ZoneName[85] = "Wilbarger"
+ZoneName[86] = "Wichita"
+ZoneName[87] = "Knox"
+ZoneName[88] = "Baylor"
+ZoneName[89] = "Archer"
+ZoneName[90] = "Clay"
+ZoneName[91] = "Montague"
+ZoneName[92] = "Cooke"
+ZoneName[93] = "Grayson"
+ZoneName[94] = "Fannin"
+ZoneName[95] = "Lamar"
+ZoneName[96] = "Red River"
+ZoneName[97] = "Bowie"
+ZoneName[98] = "Haskell"
+ZoneName[99] = "Throckmorton"
+ZoneName[100] = "Young"
+ZoneName[101] = "Jack"
+ZoneName[102] = "Wise"
+ZoneName[103] = "Denton"
+ZoneName[104] = "Collin"
+ZoneName[105] = "Hunt"
+ZoneName[106] = "Delta"
+ZoneName[107] = "Hopkins"
+ZoneName[108] = "Franklin"
+ZoneName[109] = "Titus"
+ZoneName[110] = "Camp"
+ZoneName[111] = "Morris"
+ZoneName[112] = "Cass"
+ZoneName[113] = "Jones"
+ZoneName[114] = "Shackelford"
+ZoneName[115] = "Stephens"
+ZoneName[116] = "Palo Pinto"
+ZoneName[117] = "Parker"
+ZoneName[118] = "Tarrant"
+ZoneName[119] = "Dallas"
+ZoneName[120] = "Rockwall"
+ZoneName[121] = "Kaufman"
+ZoneName[122] = "Van Zandt"
+ZoneName[123] = "Rains"
+ZoneName[124] = "Wood"
+ZoneName[125] = "Upshur"
+ZoneName[126] = "Marion"
+ZoneName[127] = "Taylor"
+ZoneName[128] = "Callahan"
+ZoneName[129] = "Eastland"
+ZoneName[130] = "Erath"
+ZoneName[131] = "Hood"
+ZoneName[132] = "Somervell"
+ZoneName[133] = "Johnson"
+ZoneName[134] = "Ellis"
+ZoneName[135] = "Henderson"
+ZoneName[136] = "Smith"
+ZoneName[137] = "Gregg"
+ZoneName[138] = "Harrison"
+ZoneName[139] = "Coleman"
+ZoneName[140] = "Brown"
+ZoneName[141] = "Comanche"
+ZoneName[142] = "Mills"
+ZoneName[143] = "Hamilton"
+ZoneName[144] = "Bosque"
+ZoneName[145] = "Hill"
+ZoneName[146] = "Navarro"
+ZoneName[147] = "Freestone"
+ZoneName[148] = "Anderson"
+ZoneName[149] = "Cherokee"
+ZoneName[150] = "Rusk"
+ZoneName[151] = "Panola"
+ZoneName[152] = "Nacogdoches"
+ZoneName[153] = "Shelby"
+ZoneName[154] = "McCulloch"
+ZoneName[155] = "San Saba"
+ZoneName[156] = "Lampasas"
+ZoneName[157] = "Coryell"
+ZoneName[158] = "Bell"
+ZoneName[159] = "McLennan"
+ZoneName[160] = "Falls"
+ZoneName[161] = "Limestone"
+ZoneName[162] = "Leon"
+ZoneName[163] = "Houston"
+ZoneName[164] = "Trinity"
+ZoneName[165] = "Angelina"
+ZoneName[166] = "San Augustine"
+ZoneName[167] = "Sabine"
+ZoneName[168] = "Menard"
+ZoneName[169] = "Kimble"
+ZoneName[170] = "Mason"
+ZoneName[171] = "Llano"
+ZoneName[172] = "Burnet"
+ZoneName[173] = "Williamson"
+ZoneName[174] = "Milam"
+ZoneName[175] = "Robertson"
+ZoneName[176] = "Madison"
+ZoneName[177] = "Walker"
+ZoneName[178] = "San Jancinto"
+ZoneName[179] = "Polk"
+ZoneName[180] = "Tyler"
+ZoneName[181] = "Jasper"
+ZoneName[182] = "Newton"
+ZoneName[183] = "Val Verde"
+ZoneName[184] = "Edwards"
+ZoneName[185] = "Real"
+ZoneName[186] = "Kerr"
+ZoneName[187] = "Bandera"
+ZoneName[188] = "Gillespie"
+ZoneName[189] = "Kendall"
+ZoneName[190] = "Blanco"
+ZoneName[191] = "Hays"
+ZoneName[192] = "Travis"
+ZoneName[193] = "Bastrop"
+ZoneName[194] = "Lee"
+ZoneName[195] = "Burleson"
+ZoneName[196] = "Brazos"
+ZoneName[197] = "Washington"
+ZoneName[198] = "Grimes"
+ZoneName[199] = "Montgomery"
+ZoneName[200] = "Liberty"
+ZoneName[201] = "Hardin"
+ZoneName[202] = "Kinney"
+ZoneName[203] = "Uvalde"
+ZoneName[204] = "Medina"
+ZoneName[205] = "Bexar"
+ZoneName[206] = "Comal"
+ZoneName[207] = "Guadalupe"
+ZoneName[208] = "Caldwell"
+ZoneName[209] = "Fayette"
+ZoneName[210] = "Colorado"
+ZoneName[211] = "Austin"
+ZoneName[212] = "Waller"
+ZoneName[213] = "Harris"
+ZoneName[214] = "Chambers"
+ZoneName[215] = "Jefferson"
+ZoneName[216] = "Orange"
+ZoneName[217] = "Maverick"
+ZoneName[218] = "Zavala"
+ZoneName[219] = "Frio"
+ZoneName[220] = "Atascosa"
+ZoneName[221] = "Wilson"
+ZoneName[222] = "Karnes"
+ZoneName[223] = "Gonzales"
+ZoneName[224] = "De Witt"
+ZoneName[225] = "Lavaca"
+ZoneName[226] = "Wharton"
+ZoneName[227] = "Fort Bend"
+ZoneName[228] = "Dimmit"
+ZoneName[229] = "La Salle"
+ZoneName[230] = "McMullen"
+ZoneName[231] = "Live Oak"
+ZoneName[232] = "Bee"
+ZoneName[233] = "Goliad"
+ZoneName[234] = "Victoria"
+ZoneName[235] = "Jackson"
+ZoneName[236] = "Matagorda"
+ZoneName[237] = "Brazoria"
+ZoneName[238] = "Galveston"
+ZoneName[239] = "Webb"
+ZoneName[240] = "Duval"
+ZoneName[241] = "Jim Wells"
+ZoneName[242] = "Kleberg"
+ZoneName[243] = "Nueces"
+ZoneName[244] = "San Patricio"
+ZoneName[245] = "Aransas"
+ZoneName[246] = "Refugio"
+ZoneName[247] = "Calhoun"
+ZoneName[248] = "Zapata"
+ZoneName[249] = "Jim Hogg"
+ZoneName[250] = "Brooks"
+ZoneName[251] = "Kenedy"
+ZoneName[252] = "Starr"
+ZoneName[253] = "Hidalgo"
+ZoneName[254] = "Inland Willacy"
+ZoneName[255] = "Inland Cameron"
+ZoneName[256] = "Coastal Willacy"
+ZoneName[257] = "Coastal Cameron"
+ZoneName[258] = "Guadalupe Mtns of Culberson County / Extr NW Culberson"
+   //-->
+	</script> 
+	 <p align="center"><font size="+1"><b>STATE </b></font>Warning, Forecast &amp; Observation Selection Page <i>for</i><font size="+1">
+		TEXAS</font><br> <nobr><font size="-1"><b>Select desired area(s) by map number(s) or use drop down windows below</b> </font></nobr><br>
+		<img src="tx.jpg" alt="Texas state map" width="622" height="432" usemap="#TexasUGCZ"> 
+		<map name="TexasUGCZ">
+		  <area shape="POLY" coords="2,209,2,430,433,429,412,399,400,413,382,405,370,407,360,399,354,399,348,394,337,393,327,367,324,347,313,339,306,329,299,323,284,291,277,284,267,278,257,267,236,269,232,267,220,271,212,288,199,302,187,291,182,293,178,287,173,286,152,275,149,271,144,257,147,249,137,243,136,234,123,229,104,208,95,206,88,196,81,193,31,194,31,210,4,211" href="javascript:MainHelp()" alt="Mexico" >
+		  <area shape="POLY" coords="413,399,434,431,621,431,620,262,571,281,544,267,525,269,507,275,473,300,436,319,413,338,402,362,406,389,414,399,414,398,413,399" href="javascript:MainHelp()" alt="Gulf of Mexico" >
+		  <area shape="POLY" coords="496,20,502,54,502,125,507,126,518,127,518,148,620,147,620,19,495,20,496,20" href="http://weather.noaa.gov/pd/arkansas.html" alt="Arkansas map" >
+		  <area shape="POLY" coords="206,2,1,2,2,209,29,209,29,193,83,192,83,183,204,183,206,3,206,2" href="http://weather.noaa.gov/pd/newmexico.html" alt="New Mexico map" >
+		  <area shape="POLY" coords="522,269,528,268,545,267,572,276,580,274,620,259,620,148,516,148,517,190,526,194,524,199,538,222,528,241,527,247,530,257,522,260,520,269,522,269" href="http://weather.noaa.gov/pd/louisiana.html" alt="Louisiana map" >
+		  <area shape="POLY" coords="207,1,209,20,311,20,311,85,323,95,335,92,342,102,365,106,375,104,384,114,392,109,400,117,408,112,411,115,415,110,422,115,427,113,437,120,463,111,470,115,479,111,501,124,501,55,495,20,495,1,208,1,207,1" href="http://weather.noaa.gov/pd/oklahoma.html" alt="Oklahoma map" >
+		  <area shape="POLY" coords="141,183,141,192,154,192,153,186,141,185,141,183" href="javascript:DisplaySites(&#39;TXZ258&#39;)" alt="Zone 258">
+		  <area shape="POLY" coords="399,395,405,405,410,401,406,394,400,395,399,395" href="javascript:DisplaySites(&#39;TXZ257&#39;)" alt="Zone 257">
+		  <area shape="POLY" coords="396,385,398,394,408,396,402,384,397,384,396,384,396,385" href="javascript:DisplaySites(&#39;TXZ256&#39;)" alt="Zone 256">
+		  <area shape="POLY" coords="385,395,386,405,399,411,404,407,400,396,386,395,385,395" href="javascript:DisplaySites(&#39;TXZ255&#39;)" alt="Zone 255">
+		  <area shape="POLY" coords="380,384,381,392,387,392,387,395,399,394,396,384,381,385,380,385,380,384" href="javascript:DisplaySites(&#39;TXZ254&#39;)" alt="Zone 254">
+		  <area shape="POLY" coords="366,378,359,396,362,397,373,405,384,403,384,390,379,388,382,386,380,379,365,379,366,378" href="javascript:DisplaySites(&#39;TXZ253&#39;)" alt="Zone 253">
+		  <area shape="POLY" coords="339,385,341,391,352,392,359,396,366,378,347,377,338,386,339,386,339,385" href="javascript:DisplaySites(&#39;TXZ252&#39;)" alt="Zone 252">
+		  <area shape="POLY" coords="380,361,381,386,399,386,396,371,399,362,380,362,380,361" href="javascript:DisplaySites(&#39;TXZ251&#39;)" alt="Zone 251">
+		  <area shape="POLY" coords="363,360,366,370,364,377,380,377,380,361,362,360,363,360" href="javascript:DisplaySites(&#39;TXZ250&#39;)" alt="Zone 250">
+		  <area shape="POLY" coords="351,356,353,360,347,359,347,377,364,376,364,368,361,365,361,358,360,356,353,356,352,358,347,360,351,356" href="javascript:DisplaySites(&#39;TXZ249&#39;)" alt="Zone 249">
+		  <area shape="POLY" coords="327,358,330,363,329,369,339,385,345,379,346,377,346,360,327,360,326,359,327,358" href="javascript:DisplaySites(&#39;TXZ248&#39;)" alt="Zone 248">
+		  <area shape="POLY" coords="417,311,424,326,436,316,425,307,417,313,418,314,417,311" href="javascript:DisplaySites(&#39;TXZ247&#39;)" alt="Zone 247">
+		  <area shape="POLY" coords="395,328,403,327,406,329,412,321,421,321,422,316,408,312,402,318,397,327,395,328" href="javascript:DisplaySites(&#39;TXZ246&#39;)" alt="Zone 246">
+		  <area shape="POLY" coords="406,330,411,338,423,327,419,322,413,322,412,326,405,330,406,330" href="javascript:DisplaySites(&#39;TXZ245&#39;)" alt="Zone 245">
+		  <area shape="POLY" coords="386,327,382,331,406,341,410,335,404,328,397,327,393,329,388,327,382,330,386,327" href="javascript:DisplaySites(&#39;TXZ244&#39;)" alt="Zone 244">
+		  <area shape="POLY" coords="382,336,382,348,404,350,405,345,402,338,392,334,384,334,382,336" href="javascript:DisplaySites(&#39;TXZ243&#39;)" alt="Zone 243">
+		  <area shape="POLY" coords="380,347,379,359,387,360,401,359,405,350,385,348,379,347,380,347" href="javascript:DisplaySites(&#39;TXZ242&#39;)" alt="Zone 242">
+		  <area shape="POLY" coords="371,329,371,358,378,358,378,347,382,347,381,336,386,334,385,331,383,331,382,330,371,330,370,330,371,329" href="javascript:DisplaySites(&#39;TXZ241&#39;)" alt="Zone 241">
+		  <area shape="POLY" coords="351,329,352,356,361,356,363,359,371,359,371,330,353,330,351,329" href="javascript:DisplaySites(&#39;TXZ240&#39;)" alt="Zone 240">
+		  <area shape="POLY" coords="304,325,312,332,321,346,326,347,327,358,352,361,351,331,331,330,332,325,302,324,303,324,304,325" href="javascript:DisplaySites(&#39;TXZ239&#39;)" alt="Zone 239">
+		  <area shape="POLY" coords="473,272,480,285,488,285,498,275,492,275,493,268,493,266,485,268,476,279,473,272" href="javascript:DisplaySites(&#39;TXZ238&#39;)" alt="Zone 238">
+		  <area shape="POLY" coords="453,286,465,303,482,286,475,277,477,275,471,273,463,285,456,285,453,286" href="javascript:DisplaySites(&#39;TXZ237&#39;)" alt="Zone 237">
+		  <area shape="POLY" coords="438,297,437,306,441,310,465,303,456,296,454,286,436,300,438,297" href="javascript:DisplaySites(&#39;TXZ236&#39;)" alt="Zone 236">
+		  <area shape="POLY" coords="419,292,427,303,432,310,438,306,438,297,425,287,417,295,417,294,419,292" href="javascript:DisplaySites(&#39;TXZ235&#39;)" alt="Zone 235">
+		  <area shape="POLY" coords="403,300,409,303,409,312,415,313,427,306,416,292,403,300,404,300,403,300" href="javascript:DisplaySites(&#39;TXZ234&#39;)" alt="Zone 234">
+		  <area shape="POLY" coords="387,308,402,317,408,312,408,302,400,300,386,310,385,310,387,308" href="javascript:DisplaySites(&#39;TXZ233&#39;)" alt="Zone 233">
+		  <area shape="POLY" coords="377,306,386,327,396,329,402,319,388,312,388,307,386,309,375,306,377,306" href="javascript:DisplaySites(&#39;TXZ232&#39;)" alt="Zone 232">
+		  <area shape="POLY" coords="368,308,370,330,383,330,386,327,375,303,368,310,368,308" href="javascript:DisplaySites(&#39;TXZ231&#39;)" alt="Zone 231">
+		  <area shape="RECT" coords="353,309,369,329" href="javascript:DisplaySites(&#39;TXZ230&#39;)" alt="Zone 230">
+		  <area shape="RECT" coords="332,308,351,330" href="javascript:DisplaySites(&#39;TXZ229&#39;)" alt="Zone 229">
+		  <area shape="RECT" coords="309,308,332,324" href="javascript:DisplaySites(&#39;TXZ228&#39;)" alt="Zone 228">
+		  <area shape="POLY" coords="444,275,454,285,462,284,465,280,467,279,470,274,454,265,445,275,444,275" href="javascript:DisplaySites(&#39;TXZ227&#39;)" alt="Zone 227">
+		  <area shape="POLY" coords="426,286,439,297,454,285,445,276,443,272,424,288,426,286" href="javascript:DisplaySites(&#39;TXZ226&#39;)" alt="Zone 226">
+		  <area shape="POLY" coords="405,282,410,283,418,294,428,283,419,273,410,275,404,283,405,282" href="javascript:DisplaySites(&#39;TXZ225&#39;)" alt="Zone 225">
+		  <area shape="POLY" coords="388,294,393,303,400,298,404,300,414,293,409,285,405,282,388,298,389,298,388,298,388,294" href="javascript:DisplaySites(&#39;TXZ224&#39;)" alt="Zone 224">
+		  <area shape="POLY" coords="387,283,394,292,408,278,407,271,403,267,393,272,385,282,387,283" href="javascript:DisplaySites(&#39;TXZ223&#39;)" alt="Zone 223">
+		  <area shape="POLY" coords="374,301,379,306,387,307,393,303,388,295,392,291,386,286,373,302,374,301" href="javascript:DisplaySites(&#39;TXZ222&#39;)" alt="Zone 222">
+		  <area shape="POLY" coords="374,281,365,291,374,301,388,286,385,283,371,283,374,281" href="javascript:DisplaySites(&#39;TXZ221&#39;)" alt="Zone 221">
+		  <area shape="POLY" coords="353,287,353,306,353,308,368,309,375,303,367,291,353,287,353,288,353,287" href="javascript:DisplaySites(&#39;TXZ220&#39;)" alt="Zone 220">
+		  <area shape="RECT" coords="333,292,351,308" href="javascript:DisplaySites(&#39;TXZ219&#39;)" alt="Zone 219">
+		  <area shape="RECT" coords="308,293,332,308" href="javascript:DisplaySites(&#39;TXZ218&#39;)" alt="Zone 218">
+		  <area shape="POLY" coords="287,292,302,324,307,325,307,293,286,293,287,292" href="javascript:DisplaySites(&#39;TXZ217&#39;)" alt="Zone 217">
+		  <area shape="POLY" coords="513,252,526,260,529,248,517,249,514,254,515,254,513,252" href="javascript:DisplaySites(&#39;TXZ216&#39;)" alt="Zone 216">
+		  <area shape="POLY" coords="503,254,506,275,516,270,524,270,520,266,524,260,516,257,515,250,503,256,503,254" href="javascript:DisplaySites(&#39;TXZ215&#39;)" alt="Zone 215">
+		  <area shape="POLY" coords="486,261,486,272,490,267,494,267,493,272,491,275,504,274,502,263,484,264,486,261" href="javascript:DisplaySites(&#39;TXZ214&#39;)" alt="Zone 214">
+		  <area shape="POLY" coords="452,253,455,265,468,274,472,272,479,275,485,271,487,265,480,252,472,258,464,252,453,254,452,253" href="javascript:DisplaySites(&#39;TXZ213&#39;)" alt="Zone 213">
+		  <area shape="POLY" coords="445,248,445,252,442,254,446,268,451,267,454,264,449,253,455,254,455,248,444,249,445,248" href="javascript:DisplaySites(&#39;TXZ212&#39;)" alt="Zone 212">
+		  <area shape="POLY" coords="428,258,432,261,437,263,441,272,448,273,445,265,442,254,433,255,428,259,429,260,428,258" href="javascript:DisplaySites(&#39;TXZ211&#39;)" alt="Zone 211">
+		  <area shape="POLY" coords="419,272,434,283,441,272,438,265,429,263,420,275,421,274,419,272" href="javascript:DisplaySites(&#39;TXZ210&#39;)" alt="Zone 210">
+		  <area shape="POLY" coords="403,267,410,274,419,273,429,262,424,252,414,258,402,269,403,267" href="javascript:DisplaySites(&#39;TXZ209&#39;)" alt="Zone 209">
+		  <area shape="POLY" coords="383,265,394,271,403,266,392,259,382,267,383,265" href="javascript:DisplaySites(&#39;TXZ208&#39;)" alt="Zone 208">
+		  <area shape="POLY" coords="371,274,375,279,375,281,386,281,392,272,383,266,372,275,370,274,370,274,371,274" href="javascript:DisplaySites(&#39;TXZ207&#39;)" alt="Zone 207">
+		  <area shape="POLY" coords="358,267,366,268,370,274,380,268,370,258,357,268,358,267" href="javascript:DisplaySites(&#39;TXZ206&#39;)" alt="Zone 206">
+		  <area shape="POLY" coords="353,269,352,286,364,292,375,278,367,273,365,269,355,268,352,272,353,271,353,269" href="javascript:DisplaySites(&#39;TXZ205&#39;)" alt="Zone 205">
+		  <area shape="RECT" coords="331,273,353,292" href="javascript:DisplaySites(&#39;TXZ204&#39;)" alt="Zone 204">
+		  <area shape="RECT" coords="309,273,330,291" href="javascript:DisplaySites(&#39;TXZ203&#39;)" alt="Zone 203">
+		  <area shape="POLY" coords="287,273,288,283,284,286,288,292,308,291,308,273,288,272,287,273" href="javascript:DisplaySites(&#39;TXZ202&#39;)" alt="Zone 202">
+		  <area shape="POLY" coords="494,242,498,254,507,254,509,251,514,251,511,242,499,240,492,244,494,242" href="javascript:DisplaySites(&#39;TXZ201&#39;)" alt="Zone 201">
+		  <area shape="POLY" coords="476,245,485,263,503,262,503,255,497,254,493,240,488,242,476,246" href="javascript:DisplaySites(&#39;TXZ200&#39;)" alt="Zone 200">
+		  <area shape="POLY" coords="455,235,455,255,464,252,474,257,480,250,475,243,467,238,466,241,453,235" href="javascript:DisplaySites(&#39;TXZ199&#39;)" alt="Zone 199">
+		  <area shape="RECT" coords="445,228,455,248" href="javascript:DisplaySites(&#39;TXZ198&#39;)" alt="Zone 198">
+		  <area shape="POLY" coords="424,250,428,257,433,254,440,254,444,256,442,251,445,248,441,244,428,247,425,251" href="javascript:DisplaySites(&#39;TXZ197&#39;)" alt="Zone 197">
+		  <area shape="POLY" coords="429,234,440,245,443,244,444,227,440,221,428,234,429,234" href="javascript:DisplaySites(&#39;TXZ196&#39;)" alt="Zone 196">
+		  <area shape="POLY" coords="415,238,426,247,440,244,433,236,429,235,428,232,415,240,416,240" href="javascript:DisplaySites(&#39;TXZ195&#39;)" alt="Zone 195">
+		  <area shape="POLY" coords="403,245,412,248,413,257,423,253,424,247,414,238,403,246" href="javascript:DisplaySites(&#39;TXZ194&#39;)" alt="Zone 194">
+		  <area shape="POLY" coords="403,245,392,257,403,268,412,257,411,249,401,245,402,245" href="javascript:DisplaySites(&#39;TXZ193&#39;)" alt="Zone 193">
+		  <area shape="POLY" coords="380,236,376,247,388,258,398,250,402,244,394,241,388,244,379,236,380,236,377,238,376,238" href="javascript:DisplaySites(&#39;TXZ192&#39;)" alt="Zone 192">
+		  <area shape="POLY" coords="374,247,370,258,379,266,380,270,388,258,374,246,374,247" href="javascript:DisplaySites(&#39;TXZ191&#39;)" alt="Zone 191">
+		  <area shape="POLY" coords="358,239,360,254,364,260,369,256,374,244,365,239,358,241,358,239" href="javascript:DisplaySites(&#39;TXZ190&#39;)" alt="Zone 190">
+		  <area shape="POLY" coords="350,254,348,268,353,269,364,260,359,254,347,254,350,254" href="javascript:DisplaySites(&#39;TXZ189&#39;)" alt="Zone 189">
+		  <area shape="RECT" coords="336,240,358,253" href="javascript:DisplaySites(&#39;TXZ188&#39;)" alt="Zone 188">
+		  <area shape="POLY" coords="324,262,323,273,345,272,345,274,351,269,339,262,324,263,324,262" href="javascript:DisplaySites(&#39;TXZ187&#39;)" alt="Zone 187">
+		  <area shape="POLY" coords="319,248,319,255,323,262,339,261,347,266,347,254,336,253,335,248,319,248,319,248" href="javascript:DisplaySites(&#39;TXZ186&#39;)" alt="Zone 186">
+		  <area shape="POLY" coords="313,256,309,264,309,272,323,272,323,261,321,261,319,255,312,256,311,256,313,256" href="javascript:DisplaySites(&#39;TXZ185&#39;)" alt="Zone 185">
+		  <area shape="POLY" coords="287,246,287,272,309,272,309,264,312,255,319,255,318,248,287,248,287,246" href="javascript:DisplaySites(&#39;TXZ184&#39;)" alt="Zone 184">
+		  <area shape="POLY" coords="250,246,250,266,261,266,283,286,286,282,286,247,250,247,249,247,250,246" href="javascript:DisplaySites(&#39;TXZ183&#39;)" alt="Zone 183">
+		  <area shape="POLY" coords="520,216,524,224,521,248,529,248,529,234,536,220,532,216,520,219,520,216" href="javascript:DisplaySites(&#39;TXZ182&#39;)" alt="Zone 182">
+		  <area shape="POLY" coords="509,222,515,235,513,241,515,248,520,249,524,224,519,218,509,222,510,222,509,222" href="javascript:DisplaySites(&#39;TXZ181&#39;)" alt="Zone 181">
+		  <area shape="POLY" coords="491,220,496,223,499,239,515,240,516,233,514,231,510,222,505,222,494,222" href="javascript:DisplaySites(&#39;TXZ180&#39;)" alt="Zone 180">
+		  <area shape="POLY" coords="474,228,485,238,488,238,488,241,498,240,494,220,488,220,475,230,476,230" href="javascript:DisplaySites(&#39;TXZ179&#39;)" alt="Zone 179">
+		  <area shape="POLY" coords="469,226,470,240,477,245,488,241,488,238,482,238,482,233,479,232,476,226,469,228" href="javascript:DisplaySites(&#39;TXZ178&#39;)" alt="Zone 178">
+		  <area shape="POLY" coords="453,226,454,234,463,239,470,238,470,225,468,225,467,220,461,225,453,229,455,228,452,228,452,227,453,226" href="javascript:DisplaySites(&#39;TXZ177&#39;)" alt="Zone 177">
+		  <area shape="POLY" coords="442,223,444,227,463,224,457,220,449,220,441,224,442,223" href="javascript:DisplaySites(&#39;TXZ176&#39;)" alt="Zone 176">
+		  <area shape="POLY" coords="420,219,428,230,432,229,440,220,437,208,418,221,420,219" href="javascript:DisplaySites(&#39;TXZ175&#39;)" alt="Zone 175">
+		  <area shape="POLY" coords="404,224,404,230,409,238,427,230,420,220,405,224,405,228,404,224" href="javascript:DisplaySites(&#39;TXZ174&#39;)" alt="Zone 174">
+		  <area shape="POLY" coords="383,225,380,234,387,242,393,240,403,245,407,241,403,231,382,226,382,227,383,225" href="javascript:DisplaySites(&#39;TXZ173&#39;)" alt="Zone 173">
+		  <area shape="POLY" coords="364,221,367,239,375,243,383,225,381,220,362,221,362,223,364,221" href="javascript:DisplaySites(&#39;TXZ172&#39;)" alt="Zone 172">
+		  <area shape="POLY" coords="346,224,346,239,366,239,363,226,345,225,346,224" href="javascript:DisplaySites(&#39;TXZ171&#39;)" alt="Zone 171">
+		  <area shape="RECT" coords="329,224,346,238" href="javascript:DisplaySites(&#39;TXZ170&#39;)" alt="Zone 170">
+		  <area shape="POLY" coords="306,233,307,248,335,248,335,240,327,241,329,233,305,233,306,233" href="javascript:DisplaySites(&#39;TXZ169&#39;)" alt="Zone 169">
+		  <area shape="POLY" coords="307,219,307,232,328,231,327,223,325,223,324,219,305,220,306,220,307,219" href="javascript:DisplaySites(&#39;TXZ168&#39;)" alt="Zone 168">
+		  <area shape="POLY" coords="519,200,516,214,531,215,524,199,517,200,519,200" href="javascript:DisplaySites(&#39;TXZ167&#39;)" alt="Zone 167">
+		  <area shape="POLY" coords="508,198,508,212,511,217,518,213,516,205,518,203,516,201,507,200,507,201,508,198" href="javascript:DisplaySites(&#39;TXZ166&#39;)" alt="Zone 166">
+		  <area shape="POLY" coords="485,206,490,218,507,220,511,216,497,206,492,205,488,202,484,209,485,206" href="javascript:DisplaySites(&#39;TXZ165&#39;)" alt="Zone 165">
+		  <area shape="POLY" coords="469,218,468,225,475,224,489,217,484,208,466,220,469,218" href="javascript:DisplaySites(&#39;TXZ164&#39;)" alt="Zone 164">
+		  <area shape="POLY" coords="459,202,462,210,458,217,460,220,470,218,485,207,476,200,458,204,459,202" href="javascript:DisplaySites(&#39;TXZ163&#39;)" alt="Zone 163">
+		  <area shape="POLY" coords="438,207,441,221,449,217,457,217,461,209,456,199,439,209,438,207" href="javascript:DisplaySites(&#39;TXZ162&#39;)" alt="Zone 162">
+		  <area shape="POLY" coords="416,194,429,213,440,204,432,193,424,191,414,194,416,194" href="javascript:DisplaySites(&#39;TXZ161&#39;)" alt="Zone 161">
+		  <area shape="POLY" coords="405,212,411,220,428,212,420,204,403,214,405,212" href="javascript:DisplaySites(&#39;TXZ160&#39;)" alt="Zone 160">
+		  <area shape="POLY" coords="393,200,403,213,420,201,413,191,392,201,393,200" href="javascript:DisplaySites(&#39;TXZ159&#39;)" alt="Zone 159">
+		  <area shape="POLY" coords="382,220,385,224,404,229,404,224,411,220,405,211,403,212,399,211,382,221,382,221,382,220" href="javascript:DisplaySites(&#39;TXZ158&#39;)" alt="Zone 158">
+		  <area shape="POLY" coords="373,204,384,218,400,208,389,197,372,206,373,204" href="javascript:DisplaySites(&#39;TXZ157&#39;)" alt="Zone 157">
+		  <area shape="POLY" coords="361,212,364,219,382,219,371,204,361,214,361,212" href="javascript:DisplaySites(&#39;TXZ156&#39;)" alt="Zone 156">
+		  <area shape="POLY" coords="342,205,342,223,362,223,361,214,354,207,343,205,342,205" href="javascript:DisplaySites(&#39;TXZ155&#39;)" alt="Zone 155">
+		  <area shape="RECT" coords="326,204,342,223" href="javascript:DisplaySites(&#39;TXZ154&#39;)" alt="Zone 154">
+		  <area shape="POLY" coords="498,184,509,198,523,200,526,193,515,184,500,187,498,184" href="javascript:DisplaySites(&#39;TXZ153&#39;)" alt="Zone 153">
+		  <area shape="POLY" coords="488,191,486,196,490,204,498,204,508,213,509,200,502,191,487,191,488,191,488,191" href="javascript:DisplaySites(&#39;TXZ152&#39;)" alt="Zone 152">
+		  <area shape="POLY" coords="503,170,496,181,499,185,516,184,516,169,507,173,501,172,503,170" href="javascript:DisplaySites(&#39;TXZ151&#39;)" alt="Zone 151">
+		  <area shape="POLY" coords="485,171,486,190,502,191,501,186,496,185,497,179,503,170,485,172,486,172" href="javascript:DisplaySites(&#39;TXZ150&#39;)" alt="Zone 150">
+		  <area shape="POLY" coords="467,180,469,192,484,204,488,202,485,195,484,180,468,181" href="javascript:DisplaySites(&#39;TXZ149&#39;)" alt="Zone 149">
+		  <area shape="POLY" coords="448,184,460,202,475,198,467,190,467,184,452,183,448,185,449,184,449,186,448,186" href="javascript:DisplaySites(&#39;TXZ148&#39;)" alt="Zone 148">
+		  <area shape="POLY" coords="432,193,441,205,455,197,447,184,431,193,432,193" href="javascript:DisplaySites(&#39;TXZ147&#39;)" alt="Zone 147">
+		  <area shape="POLY" coords="419,182,424,192,431,192,448,184,436,172,415,184" href="javascript:DisplaySites(&#39;TXZ146&#39;)" alt="Zone 146">
+		  <area shape="POLY" coords="397,181,406,193,414,189,417,195,423,190,413,176,404,175,397,181" href="javascript:DisplaySites(&#39;TXZ145&#39;)" alt="Zone 145">
+		  <area shape="POLY" coords="380,184,393,200,405,193,394,177,380,184,380,184" href="javascript:DisplaySites(&#39;TXZ144&#39;)" alt="Zone 144">
+		  <area shape="POLY" coords="363,196,371,204,388,196,380,185,372,187,373,190,363,195,364,195" href="javascript:DisplaySites(&#39;TXZ143&#39;)" alt="Zone 143">
+		  <area shape="POLY" coords="347,204,356,206,360,214,371,204,362,195,358,196,344,206" href="javascript:DisplaySites(&#39;TXZ142&#39;)" alt="Zone 142">
+		  <area shape="POLY" coords="351,183,356,195,365,194,374,190,374,186,369,186,361,178,348,184" href="javascript:DisplaySites(&#39;TXZ141&#39;)" alt="Zone 141">
+		  <area shape="POLY" coords="339,183,338,204,344,204,354,199,356,194,349,183,339,184" href="javascript:DisplaySites(&#39;TXZ140&#39;)" alt="Zone 140">
+		  <area shape="POLY" coords="323,184,323,202,328,205,338,204,339,184,324,184,325,184" href="javascript:DisplaySites(&#39;TXZ139&#39;)" alt="Zone 139">
+		  <area shape="POLY" coords="493,150,493,170,504,167,506,172,515,168,516,158,500,159,493,153" href="javascript:DisplaySites(&#39;TXZ138&#39;)" alt="Zone 138">
+		  <area shape="POLY" coords="484,164,485,170,493,170,494,159,483,165,484,164" href="javascript:DisplaySites(&#39;TXZ137&#39;)" alt="Zone 137">
+		  <area shape="POLY" coords="463,159,464,166,470,171,467,179,484,179,484,165,464,161,463,159" href="javascript:DisplaySites(&#39;TXZ136&#39;)" alt="Zone 136">
+		  <area shape="POLY" coords="435,171,444,178,448,184,469,181,467,170,436,172,435,171" href="javascript:DisplaySites(&#39;TXZ135&#39;)" alt="Zone 135">
+		  <area shape="POLY" coords="411,164,412,176,416,182,435,171,429,165,411,165,411,164" href="javascript:DisplaySites(&#39;TXZ134&#39;)" alt="Zone 134">
+		  <area shape="POLY" coords="393,165,392,173,396,180,411,175,411,165,392,165,393,165,393,165" href="javascript:DisplaySites(&#39;TXZ133&#39;)" alt="Zone 133">
+		  <area shape="POLY" coords="383,175,385,181,393,177,393,172,385,173,382,176,383,175" href="javascript:DisplaySites(&#39;TXZ132&#39;)" alt="Zone 132">
+		  <area shape="POLY" coords="377,165,384,175,385,172,392,172,392,165,376,165,377,165,377,165" href="javascript:DisplaySites(&#39;TXZ131&#39;)" alt="Zone 131">
+		  <area shape="POLY" coords="363,165,365,174,361,176,369,186,370,184,374,187,384,180,377,165,363,166,363,165" href="javascript:DisplaySites(&#39;TXZ130&#39;)" alt="Zone 130">
+		  <area shape="POLY" coords="341,164,339,182,348,183,363,173,363,165,339,165,339,165,339,166,341,164" href="javascript:DisplaySites(&#39;TXZ129&#39;)" alt="Zone 129">
+		  <area shape="RECT" coords="323,165,341,184" href="javascript:DisplaySites(&#39;TXZ128&#39;)" alt="Zone 128">
+		  <area shape="RECT" coords="308,165,322,180" href="javascript:DisplaySites(&#39;TXZ127&#39;)" alt="Zone 127">
+		  <area shape="POLY" coords="493,147,501,158,517,158,514,148,493,148,493,147" href="javascript:DisplaySites(&#39;TXZ126&#39;)" alt="Zone 126">
+		  <area shape="POLY" coords="478,155,479,165,486,165,491,162,488,157,479,156,480,157" href="javascript:DisplaySites(&#39;TXZ125&#39;)" alt="Zone 125">
+		  <area shape="POLY" coords="462,149,465,161,479,163,476,146,461,147,462,147,462,149" href="javascript:DisplaySites(&#39;TXZ124&#39;)" alt="Zone 124">
+		  <area shape="POLY" coords="454,149,449,157,459,157,464,159,460,147,453,147,454,149" href="javascript:DisplaySites(&#39;TXZ123&#39;)" alt="Zone 123">
+		  <area shape="POLY" coords="447,156,447,170,467,171,464,165,463,159,446,157,445,157,447,156" href="javascript:DisplaySites(&#39;TXZ122&#39;)" alt="Zone 122">
+		  <area shape="POLY" coords="431,157,431,164,434,170,447,171,445,157,431,157" href="javascript:DisplaySites(&#39;TXZ121&#39;)" alt="Zone 121">
+		  <area shape="RECT" coords="432,147,440,157" href="javascript:DisplaySites(&#39;TXZ120&#39;)" alt="Zone 120">
+		  <area shape="RECT" coords="414,147,431,163" href="javascript:DisplaySites(&#39;TXZ119&#39;)" alt="Zone 119">
+		  <area shape="RECT" coords="396,148,413,163" href="javascript:DisplaySites(&#39;TXZ118&#39;)" alt="Zone 118">
+		  <area shape="RECT" coords="377,147,395,163" href="javascript:DisplaySites(&#39;TXZ117&#39;)" alt="Zone 117">
+		  <area shape="RECT" coords="360,148,378,164" href="javascript:DisplaySites(&#39;TXZ116&#39;)" alt="Zone 116">
+		  <area shape="RECT" coords="343,149,360,165" href="javascript:DisplaySites(&#39;TXZ115&#39;)" alt="Zone 115">
+		  <area shape="RECT" coords="325,150,342,165" href="javascript:DisplaySites(&#39;TXZ114&#39;)" alt="Zone 114">
+		  <area shape="RECT" coords="307,149,325,165" href="javascript:DisplaySites(&#39;TXZ113&#39;)" alt="Zone 113">
+		  <area shape="RECT" coords="497,138,517,146" href="javascript:DisplaySites(&#39;TXZ112&#39;)" alt="Zone 112">
+		  <area shape="RECT" coords="489,136,496,147" href="javascript:DisplaySites(&#39;TXZ111&#39;)" alt="Zone 111">
+		  <area shape="POLY" coords="480,145,482,156,489,156,489,147,488,145,484,144,479,148,480,148" href="javascript:DisplaySites(&#39;TXZ110&#39;)" alt="Zone 110">
+		  <area shape="RECT" coords="479,135,488,145" href="javascript:DisplaySites(&#39;TXZ109&#39;)" alt="Zone 109">
+		  <area shape="RECT" coords="475,135,478,146" href="javascript:DisplaySites(&#39;TXZ108&#39;)" alt="Zone 108">
+		  <area shape="POLY" coords="456,138,456,147,474,146,474,136,464,135,453,140,454,140,456,138" href="javascript:DisplaySites(&#39;TXZ107&#39;)" alt="Zone 107">
+		  <area shape="POLY" coords="455,130,455,138,463,135,472,133,463,128,454,131,454,132,455,130" href="javascript:DisplaySites(&#39;TXZ106&#39;)" alt="Zone 106">
+		  <area shape="POLY" coords="438,134,440,156,449,157,455,144,455,130,449,134,437,136,437,137,438,134" href="javascript:DisplaySites(&#39;TXZ105&#39;)" alt="Zone 105">
+		  <area shape="RECT" coords="420,135,439,146" href="javascript:DisplaySites(&#39;TXZ104&#39;)" alt="Zone 104">
+		  <area shape="RECT" coords="401,133,421,147" href="javascript:DisplaySites(&#39;TXZ103&#39;)" alt="Zone 103">
+		  <area shape="RECT" coords="382,133,401,147" href="javascript:DisplaySites(&#39;TXZ102&#39;)" alt="Zone 102">
+		  <area shape="RECT" coords="367,134,382,146" href="javascript:DisplaySites(&#39;TXZ101&#39;)" alt="Zone 101">
+		  <area shape="RECT" coords="346,135,366,147" href="javascript:DisplaySites(&#39;TXZ100&#39;)" alt="Zone 100">
+		  <area shape="RECT" coords="329,135,346,149" href="javascript:DisplaySites(&#39;TXZ099&#39;)" alt="Zone 99">
+		  <area shape="RECT" coords="312,135,329,147" href="javascript:DisplaySites(&#39;TXZ098&#39;)" alt="Zone 98">
+		  <area shape="POLY" coords="493,122,492,136,496,138,503,137,516,137,515,127,505,127,491,122,491,122,493,122" href="javascript:DisplaySites(&#39;TXZ097&#39;)" alt="Zone 97">
+		  <area shape="POLY" coords="473,113,474,134,493,134,493,121,477,112,473,118,473,113" href="javascript:DisplaySites(&#39;TXZ096&#39;)" alt="Zone 96">
+		  <area shape="POLY" coords="455,115,455,131,460,129,473,133,474,115,467,116,463,113,455,117,455,115" href="javascript:DisplaySites(&#39;TXZ095&#39;)" alt="Zone 95">
+		  <area shape="POLY" coords="437,120,437,135,453,131,454,116,435,122,436,122,437,120" href="javascript:DisplaySites(&#39;TXZ094&#39;)" alt="Zone 94">
+		  <area shape="POLY" coords="416,112,419,133,436,133,436,120,427,113,424,117,415,114,416,115,415,114,416,112" href="javascript:DisplaySites(&#39;TXZ093&#39;)" alt="Zone 93">
+		  <area shape="POLY" coords="398,117,398,131,416,132,417,113,410,121,407,119,408,113,397,119,398,119,398,117" href="javascript:DisplaySites(&#39;TXZ092&#39;)" alt="Zone 92">
+		  <area shape="POLY" coords="382,114,382,131,397,132,398,115,391,110,382,116,383,116,382,114" href="javascript:DisplaySites(&#39;TXZ091&#39;)" alt="Zone 91">
+		  <area shape="POLY" coords="365,107,365,131,380,131,381,110,376,111,376,106,365,107" href="javascript:DisplaySites(&#39;TXZ090&#39;)" alt="Zone 90">
+		  <area shape="RECT" coords="346,117,364,132" href="javascript:DisplaySites(&#39;TXZ089&#39;)" alt="Zone 89">
+		  <area shape="RECT" coords="329,118,346,133" href="javascript:DisplaySites(&#39;TXZ088&#39;)" alt="Zone 88">
+		  <area shape="POLY" coords="311,115,311,132,328,132,328,119,310,117,310,118,311,115" href="javascript:DisplaySites(&#39;TXZ087&#39;)" alt="Zone 87">
+		  <area shape="POLY" coords="347,104,345,116,364,116,364,109,360,106,345,106,344,106,347,104" href="javascript:DisplaySites(&#39;TXZ086&#39;)" alt="Zone 86">
+		  <area shape="POLY" coords="330,96,329,117,346,116,346,103,339,102,339,98,335,94,327,98,328,98,330,96" href="javascript:DisplaySites(&#39;TXZ085&#39;)" alt="Zone 85">
+		  <area shape="POLY" coords="309,101,311,114,327,118,328,110,318,107,309,101" href="javascript:DisplaySites(&#39;TXZ084&#39;)" alt="Zone 84">
+		  <area shape="POLY" coords="312,86,313,102,318,107,329,110,328,96,322,97,312,88,312,86" href="javascript:DisplaySites(&#39;TXZ083&#39;)" alt="Zone 83">
+		  <area shape="POLY" coords="230,236,230,248,223,248,222,258,230,263,238,266,249,265,249,246,255,246,250,241,254,235,238,235,236,237,229,237,230,236" href="javascript:DisplaySites(&#39;TXZ082&#39;)" alt="Zone 82">
+		  <area shape="POLY" coords="179,250,180,286,184,289,188,288,197,297,201,296,211,284,219,267,227,267,230,264,204,244,178,252,179,252,179,250" href="javascript:DisplaySites(&#39;TXZ081&#39;)" alt="Zone 81">
+		  <area shape="POLY" coords="141,232,143,237,146,237,147,244,153,251,153,263,159,269,181,282,181,245,168,242,161,234,160,226,142,234,141,234,141,232" href="javascript:DisplaySites(&#39;TXZ080&#39;)" alt="Zone 80">
+		  <area shape="POLY" coords="142,236,141,242,149,250,149,262,153,272,160,275,172,284,179,285,178,280,159,270,153,261,151,248,140,236,142,236" href="javascript:DisplaySites(&#39;TXZ079&#39;)" alt="Zone 79">
+		  <area shape="RECT" coords="278,233,304,246" href="javascript:DisplaySites(&#39;TXZ078&#39;)" alt="Zone 78">
+		  <area shape="RECT" coords="276,219,305,233" href="javascript:DisplaySites(&#39;TXZ077&#39;)" alt="Zone 77">
+		  <area shape="POLY" coords="230,218,244,224,248,235,254,234,254,238,251,242,254,245,277,245,276,219,230,220,231,220,230,218" href="javascript:DisplaySites(&#39;TXZ076&#39;)" alt="Zone 76">
+		  <area shape="POLY" coords="205,208,188,230,222,257,221,248,229,248,229,236,236,237,237,235,249,234,244,224,230,220,226,213,220,209,213,213,204,208,205,208" href="javascript:DisplaySites(&#39;TXZ075&#39;)" alt="Zone 75">
+		  <area shape="POLY" coords="156,214,156,217,159,219,160,225,160,233,167,241,180,244,181,251,206,243,179,223,176,217,169,213,156,212,156,214" href="javascript:DisplaySites(&#39;TXZ074&#39;)" alt="Zone 74">
+		  <area shape="POLY" coords="307,201,307,216,325,216,325,205,317,199,306,201,307,201" href="javascript:DisplaySites(&#39;TXZ073&#39;)" alt="Zone 73">
+		  <area shape="POLY" coords="282,195,282,200,267,200,267,203,286,203,287,216,307,216,307,201,301,201,301,196,281,194,281,195,282,195" href="javascript:DisplaySites(&#39;TXZ072&#39;)" alt="Zone 72">
+		  <area shape="RECT" coords="266,203,287,218" href="javascript:DisplaySites(&#39;TXZ071&#39;)" alt="Zone 71">
+		  <area shape="RECT" coords="249,197,266,219" href="javascript:DisplaySites(&#39;TXZ070&#39;)" alt="Zone 70">
+		  <area shape="RECT" coords="233,197,249,219" href="javascript:DisplaySites(&#39;TXZ069&#39;)" alt="Zone 69">
+		  <area shape="POLY" coords="215,198,215,210,219,208,228,214,231,220,231,199,215,199,215,198" href="javascript:DisplaySites(&#39;TXZ068&#39;)" alt="Zone 68">
+		  <area shape="POLY" coords="184,196,191,205,206,207,214,211,213,197,182,197,184,196" href="javascript:DisplaySites(&#39;TXZ067&#39;)" alt="Zone 67">
+		  <area shape="RECT" coords="301,183,320,200" href="javascript:DisplaySites(&#39;TXZ066&#39;)" alt="Zone 66">
+		  <area shape="RECT" coords="282,182,302,195" href="javascript:DisplaySites(&#39;TXZ065&#39;)" alt="Zone 65">
+		  <area shape="POLY" coords="266,182,267,201,279,199,282,195,282,182,265,183,265,183,266,182" href="javascript:DisplaySites(&#39;TXZ064&#39;)" alt="Zone 64">
+		  <area shape="RECT" coords="249,182,266,197" href="javascript:DisplaySites(&#39;TXZ063&#39;)" alt="Zone 63">
+		  <area shape="RECT" coords="231,182,249,197" href="javascript:DisplaySites(&#39;TXZ062&#39;)" alt="Zone 62">
+		  <area shape="RECT" coords="214,182,231,197" href="javascript:DisplaySites(&#39;TXZ061&#39;)" alt="Zone 61">
+		  <area shape="POLY" coords="194,184,194,196,213,196,213,182,206,182,205,185,194,185,194,184" href="javascript:DisplaySites(&#39;TXZ060&#39;)" alt="Zone 60">
+		  <area shape="POLY" coords="173,185,183,196,194,195,194,185,172,186,173,185" href="javascript:DisplaySites(&#39;TXZ059&#39;)" alt="Zone 59">
+		  <area shape="POLY" coords="155,185,156,192,166,213,170,212,175,218,179,223,189,230,207,208,200,208,198,206,192,206,190,204,188,198,186,198,179,193,179,189,175,189,173,186,157,186,157,187,155,185" href="javascript:DisplaySites(&#39;TXZ058&#39;)" alt="Zone 58">
+		  <area shape="POLY" coords="141,192,142,233,159,224,158,221,154,213,166,213,153,192,141,192" href="javascript:DisplaySites(&#39;TXZ057&#39;)" alt="Zone 57">
+		  <area shape="POLY" coords="105,185,105,207,142,235,141,185,104,186,105,186,105,185" href="javascript:DisplaySites(&#39;TXZ056&#39;)" alt="Zone 56">
+		  <area shape="POLY" coords="82,184,83,192,88,193,101,206,104,206,104,185,81,184,79,185,81,185,82,184" href="javascript:DisplaySites(&#39;TXZ055&#39;)" alt="Zone 55">
+		  <area shape="RECT" coords="289,165,304,181" href="javascript:DisplaySites(&#39;TXZ054&#39;)" alt="Zone 54">
+		  <area shape="RECT" coords="270,165,288,181" href="javascript:DisplaySites(&#39;TXZ053&#39;)" alt="Zone 53">
+		  <area shape="RECT" coords="252,165,270,180" href="javascript:DisplaySites(&#39;TXZ052&#39;)" alt="Zone 52">
+		  <area shape="RECT" coords="233,165,250,180" href="javascript:DisplaySites(&#39;TXZ051&#39;)" alt="Zone 51">
+		  <area shape="RECT" coords="204,165,233,182" href="javascript:DisplaySites(&#39;TXZ050&#39;)" alt="Zone 50">
+		  <area shape="RECT" coords="289,149,305,165" href="javascript:DisplaySites(&#39;TXZ049&#39;)" alt="Zone 49">
+		  <area shape="RECT" coords="272,150,289,165" href="javascript:DisplaySites(&#39;TXZ048&#39;)" alt="Zone 48">
+		  <area shape="RECT" coords="252,150,271,165" href="javascript:DisplaySites(&#39;TXZ047&#39;)" alt="Zone 47">
+		  <area shape="RECT" coords="234,150,252,163" href="javascript:DisplaySites(&#39;TXZ046&#39;)" alt="Zone 46">
+		  <area shape="RECT" coords="205,149,233,163" href="javascript:DisplaySites(&#39;TXZ045&#39;)" alt="Zone 45">
+		  <area shape="RECT" coords="293,134,309,147" href="javascript:DisplaySites(&#39;TXZ044&#39;)" alt="Zone 44">
+		  <area shape="RECT" coords="275,134,292,149" href="javascript:DisplaySites(&#39;TXZ043&#39;)" alt="Zone 43">
+		  <area shape="RECT" coords="256,133,274,147" href="javascript:DisplaySites(&#39;TXZ042&#39;)" alt="Zone 42">
+		  <area shape="RECT" coords="239,135,256,148" href="javascript:DisplaySites(&#39;TXZ041&#39;)" alt="Zone 41">
+		  <area shape="RECT" coords="221,133,238,148" href="javascript:DisplaySites(&#39;TXZ040&#39;)" alt="Zone 40">
+		  <area shape="RECT" coords="206,135,220,148" href="javascript:DisplaySites(&#39;TXZ039&#39;)" alt="Zone 39">
+		  <area shape="RECT" coords="294,116,311,134" href="javascript:DisplaySites(&#39;TXZ038&#39;)" alt="Zone 38">
+		  <area shape="RECT" coords="275,115,292,132" href="javascript:DisplaySites(&#39;TXZ037&#39;)" alt="Zone 37">
+		  <area shape="RECT" coords="256,116,275,133" href="javascript:DisplaySites(&#39;TXZ036&#39;)" alt="Zone 36">
+		  <area shape="RECT" coords="239,116,256,132" href="javascript:DisplaySites(&#39;TXZ035&#39;)" alt="Zone 35">
+		  <area shape="RECT" coords="221,117,238,132" href="javascript:DisplaySites(&#39;TXZ034&#39;)" alt="Zone 34">
+		  <area shape="RECT" coords="205,117,220,134" href="javascript:DisplaySites(&#39;TXZ033&#39;)" alt="Zone 33">
+		  <area shape="RECT" coords="294,101,309,115" href="javascript:DisplaySites(&#39;TXZ032&#39;)" alt="Zone 32">
+		  <area shape="RECT" coords="275,100,293,114" href="javascript:DisplaySites(&#39;TXZ031&#39;)" alt="Zone 31">
+		  <area shape="RECT" coords="256,100,275,115" href="javascript:DisplaySites(&#39;TXZ030&#39;)" alt="Zone 30">
+		  <area shape="RECT" coords="241,101,256,114" href="javascript:DisplaySites(&#39;TXZ029&#39;)" alt="Zone 29">
+		  <area shape="RECT" coords="221,100,239,115" href="javascript:DisplaySites(&#39;TXZ028&#39;)" alt="Zone 28">
+		  <area shape="RECT" coords="207,100,221,114" href="javascript:DisplaySites(&#39;TXZ027&#39;)" alt="Zone 27">
+		  <area shape="RECT" coords="296,83,310,97" href="javascript:DisplaySites(&#39;TXZ026&#39;)" alt="Zone 26">
+		  <area shape="RECT" coords="278,83,295,99" href="javascript:DisplaySites(&#39;TXZ025&#39;)" alt="Zone 25">
+		  <area shape="RECT" coords="260,82,275,98" href="javascript:DisplaySites(&#39;TXZ024&#39;)" alt="Zone 24">
+		  <area shape="RECT" coords="241,83,258,98" href="javascript:DisplaySites(&#39;TXZ023&#39;)" alt="Zone 23">
+		  <area shape="RECT" coords="223,82,241,98" href="javascript:DisplaySites(&#39;TXZ022&#39;)" alt="Zone 22">
+		  <area shape="RECT" coords="206,82,223,100" href="javascript:DisplaySites(&#39;TXZ021&#39;)" alt="Zone 21">
+		  <area shape="RECT" coords="292,65,310,81" href="javascript:DisplaySites(&#39;TXZ020&#39;)" alt="Zone 20">
+		  <area shape="RECT" coords="274,64,292,80" href="javascript:DisplaySites(&#39;TXZ019&#39;)" alt="Zone 19">
+		  <area shape="RECT" coords="255,65,273,81" href="javascript:DisplaySites(&#39;TXZ018&#39;)" alt="Zone 18">
+		  <area shape="RECT" coords="235,66,254,81" href="javascript:DisplaySites(&#39;TXZ017&#39;)" alt="Zone 17">
+		  <area shape="RECT" coords="207,66,235,81" href="javascript:DisplaySites(&#39;TXZ016&#39;)" alt="Zone 16">
+		  <area shape="RECT" coords="292,51,309,64" href="javascript:DisplaySites(&#39;TXZ015&#39;)" alt="Zone 15">
+		  <area shape="RECT" coords="275,50,290,63" href="javascript:DisplaySites(&#39;TXZ014&#39;)" alt="Zone 14">
+		  <area shape="RECT" coords="254,50,274,64" href="javascript:DisplaySites(&#39;TXZ013&#39;)" alt="Zone 13">
+		  <area shape="RECT" coords="235,50,253,64" href="javascript:DisplaySites(&#39;TXZ012&#39;)" alt="Zone 12">
+		  <area shape="RECT" coords="207,51,236,66" href="javascript:DisplaySites(&#39;TXZ011&#39;)" alt="Zone 11">
+		  <area shape="RECT" coords="291,34,310,49" href="javascript:DisplaySites(&#39;TXZ010&#39;)" alt="Zone 10">
+		  <area shape="RECT" coords="274,35,292,49" href="javascript:DisplaySites(&#39;TXZ009&#39;)" alt="Zone 9">
+		  <area shape="RECT" coords="254,35,272,49" href="javascript:DisplaySites(&#39;TXZ008&#39;)" alt="Zone 8">
+		  <area shape="RECT" coords="235,34,254,50" href="javascript:DisplaySites(&#39;TXZ007&#39;)" alt="Zone 7">
+		  <area shape="RECT" coords="207,34,234,50" href="javascript:DisplaySites(&#39;TXZ006&#39;)" alt="Zone 6">
+		  <area shape="RECT" coords="292,20,309,35" href="javascript:DisplaySites(&#39;TXZ005&#39;)" alt="Zone 5">
+		  <area shape="RECT" coords="274,20,290,34" href="javascript:DisplaySites(&#39;TXZ004&#39;)" alt="Zone 4">
+		  <area shape="RECT" coords="254,20,274,35" href="javascript:DisplaySites(&#39;TXZ003&#39;)" alt="Zone 3">
+		  <area shape="RECT" coords="234,20,254,33" href="javascript:DisplaySites(&#39;TXZ002&#39;)" alt="Zone 2">
+		  <area shape="RECT" coords="207,20,235,34" href="javascript:DisplaySites(&#39;TXZ001&#39;)" alt="Zone 1"> 
+		</map> </p> 
+	 <center> 
+		<table width="50%"> 
+		  <caption><b>Finding your WARNINGs &amp; FORECASTs through name selection</b> </caption> 
+		  <tbody><tr> 
+			 <td width="534"> 
+				<form name="DropDown1"> 
+				  <p> 
+					 <select name="Zones" onchange="DisplayStrings(1)"> 
+						<option value="TEXASZ999" selected="SELECTED">Select by Area Name</option> 
+						<option value="TXZ148">148 Anderson</option> 
+						<option value="TXZ050">50 Andrews </option> 
+						<option value="TXZ165">165 Angelina</option> 
+						<option value="TXZ245">245 Aransas</option> 
+						<option value="TXZ089">89 Archer</option> 
+						<option value="TXZ018">18 Armstrong</option> 
+						<option value="TXZ220">220 Atascosa </option> 
+						<option value="TXZ211">211 Austin</option> 
+						<option value="TXZ027">27 Bailey </option> 
+						<option value="TXZ187">187 Bandera</option> 
+						<option value="TXZ193">193 Bastrop</option> 
+						<option value="TXZ088">88 Baylor</option> 
+						<option value="TXZ232">232 Bee</option> 
+						<option value="TXZ158">158 Bell</option> 
+						<option value="TXZ205">205 Bexar</option> 
+						<option value="TXZ081">81 Big Bend Area, Brewster (except NW)</option> 
+						<option value="TXZ190">190 Blanco</option> 
+						<option value="TXZ047">47 Borden</option> 
+						<option value="TXZ144">144 Bosque</option> 
+						<option value="TXZ097">97 Bowie</option> 
+						<option value="TXZ237">237 Brazoria</option> 
+						<option value="TXZ196">196 Brazos</option> 
+						<option value="TXZ024">24 Briscoe</option> 
+						<option value="TXZ250">250 Brooks</option> 
+						<option value="TXZ140">140 Brown</option> 
+						<option value="TXZ195">195 Burleson</option> 
+						<option value="TXZ172">172 Burnet</option> 
+						<option value="TXZ208">208 Caldwell</option> 
+						<option value="TXZ247">247 Calhoun </option> 
+						<option value="TXZ128">128 Callahan</option> 
+						<option value="TXZ110">110 Camp</option> 
+						<option value="TXZ013">13 Carson</option> 
+						<option value="TXZ112">112 Cass</option> 
+						<option value="TXZ022">22 Castro</option> 
+						<option value="TXZ214">214 Chambers </option> 
+						<option value="TXZ149">149 Cherokee</option> 
+						<option value="TXZ026">26 Childress</option> 
+						<option value="TXZ090">90 Clay</option> 
+						<option value="TXZ257">257 Coastal Cameron</option> 
+						<option value="TXZ256">256 Coastal Willacy</option> 
+						<option value="TXZ033">33 Cochran</option> 
+						<option value="TXZ065">65 Coke</option> 
+						<option value="TXZ139">139 Coleman</option> 
+						<option value="TXZ104">104 Collin</option> 
+						<option value="TXZ020">20 Collingsworth</option> 
+						<option value="TXZ210">210 Colorado </option> 
+						<option value="TXZ206">206 Comal</option> 
+						<option value="TXZ141">141 Comanche </option> 
+						<option value="TXZ073">73 Concho</option> 
+						<option value="TXZ092">92 Cooke </option> 
+						<option value="TXZ157">157 Coryell</option> 
+						<option value="TXZ032">32 Cottle </option> 
+						<option value="TXZ068">68 Crane</option> 
+						<option value="TXZ076">76 Crockett </option> 
+						<option value="TXZ036">36 Crosby</option> 
+						<option value="TXZ001">1 Dallam </option> 
+						<option value="TXZ119">119 Dallas</option> 
+						<option value="TXZ074">74 Davis/Apache Mtns Area/Extr SW Reeves/Extr SE Culberson/NW Brewster/Jeff Davis/Except
+						  W</option> 
+						<option value="TXZ046">46 Dawson</option> 
+						<option value="TXZ224">224 De Witt</option> 
+						<option value="TXZ016">16 Deaf Smith</option> 
+						<option value="TXZ106">106 Delta </option> 
+						<option value="TXZ103">103 Denton</option> 
+						<option value="TXZ037">37 Dickens </option> 
+						<option value="TXZ228">228 Dimmit</option> 
+						<option value="TXZ019">19 Donley </option> 
+						<option value="TXZ240">240 Duval</option> 
+						<option value="TXZ129">129 Eastland </option> 
+						<option value="TXZ061">61 Ector</option> 
+						<option value="TXZ184">184 Edwards </option> 
+						<option value="TXZ055">55 El Paso</option> 
+						<option value="TXZ134">134 Ellis </option> 
+						<option value="TXZ130">130 Erath</option> 
+						<option value="TXZ160">160 Falls </option> 
+						<option value="TXZ094">94 Fannin</option> 
+						<option value="TXZ209">209 Fayette </option> 
+						<option value="TXZ049">49 Fisher</option> 
+						<option value="TXZ030">30 Floyd </option> 
+						<option value="TXZ084">84 Foard</option> 
+						<option value="TXZ227">227 Fort Bend</option> 
+						<option value="TXZ108">108 Franklin</option> 
+						<option value="TXZ147">147 Freestone</option> 
+						<option value="TXZ219">219 Frio</option> 
+						<option value="TXZ045">45 Gaines</option> 
+						<option value="TXZ238">238 Galveston </option> 
+						<option value="TXZ042">42 Garza</option> 
+						<option value="TXZ188">188 Gillespie</option> 
+						<option value="TXZ063">63 Glasscock</option> 
+						<option value="TXZ233">233 Goliad</option> 
+						<option value="TXZ223">223 Gonzales</option> 
+						<option value="TXZ014">14 Gray</option> 
+						<option value="TXZ093">93 Grayson</option> 
+						<option value="TXZ137">137 Gregg</option> 
+						<option value="TXZ198">198 Grimes</option> 
+						<option value="TXZ207">207 Guadalupe</option> 
+						<option value="TXZ258">258 Guadalupe Mtns of Culberson County / Extr NW Culberson</option> 
+						<option value="TXZ029">29 Hale</option> 
+						<option value="TXZ025">25 Hall</option> 
+						<option value="TXZ143">143 Hamilton</option> 
+						<option value="TXZ003">3 Hansford</option> 
+						<option value="TXZ083">83 Hardeman </option> 
+						<option value="TXZ201">201 Hardin</option> 
+						<option value="TXZ213">213 Harris </option> 
+						<option value="TXZ138">138 Harrison</option> 
+						<option value="TXZ006">6 Hartley</option> 
+						<option value="TXZ098">98 Haskell</option> 
+						<option value="TXZ191">191 Hays</option> 
+						<option value="TXZ010">10 Hemphill</option> 
+						<option value="TXZ135">135 Henderson</option> 
+						<option value="TXZ253">253 Hidalgo </option> 
+						<option value="TXZ145">145 Hill</option> 
+						<option value="TXZ034">34 Hockley </option> 
+						<option value="TXZ131">131 Hood</option> 
+						<option value="TXZ107">107 Hopkins </option> 
+						<option value="TXZ163">163 Houston</option> 
+						<option value="TXZ052">52 Howard </option> 
+						<option value="TXZ056">56 Hudspeth</option> 
+						<option value="TXZ105">105 Hunt </option> 
+						<option value="TXZ008">8 Hutchinson</option> 
+						<option value="TXZ255">255 Inland Cameron</option> 
+						<option value="TXZ254">254 Inland Willacy</option> 
+						<option value="TXZ071">71 Irion</option> 
+						<option value="TXZ101">101 Jack</option> 
+						<option value="TXZ235">235 Jackson</option> 
+						<option value="TXZ181">181 Jasper</option> 
+						<option value="TXZ215">215 Jefferson</option> 
+						<option value="TXZ249">249 Jim Hogg </option> 
+						<option value="TXZ241">241 Jim Wells</option> 
+						<option value="TXZ133">133 Johnson</option> 
+						<option value="TXZ113">113 Jones</option> 
+						<option value="TXZ222">222 Karnes</option> 
+						<option value="TXZ121">121 Kaufman</option> 
+						<option value="TXZ189">189 Kendall</option> 
+						<option value="TXZ251">251 Kenedy</option> 
+						<option value="TXZ043">43 Kent</option> 
+						<option value="TXZ186">186 Kerr</option> 
+						<option value="TXZ169">169 Kimble</option> 
+						<option value="TXZ038">38 King</option> 
+						<option value="TXZ202">202 Kinney</option> 
+						<option value="TXZ242">242 Kleberg</option> 
+						<option value="TXZ087">87 Knox</option> 
+						<option value="TXZ229">229 La Salle</option> 
+						<option value="TXZ095">95 Lamar</option> 
+						<option value="TXZ028">28 Lamb</option> 
+						<option value="TXZ156">156 Lampasas</option> 
+						<option value="TXZ225">225 Lavaca</option> 
+						<option value="TXZ194">194 Lee</option> 
+						<option value="TXZ162">162 Leon</option> 
+						<option value="TXZ200">200 Liberty</option> 
+						<option value="TXZ161">161 Limestone </option> 
+						<option value="TXZ005">5 Lipscomb</option> 
+						<option value="TXZ231">231 Live Oak</option> 
+						<option value="TXZ171">171 Llano</option> 
+						<option value="TXZ059">59 Loving</option> 
+						<option value="TXZ035">35 Lubbock</option> 
+						<option value="TXZ041">41 Lynn</option> 
+						<option value="TXZ176">176 Madison</option> 
+						<option value="TXZ080">80 Marfa Plateau, Presidio (except extreme W), W Jeff Davis </option> 
+						<option value="TXZ126">126 Marion</option> 
+						<option value="TXZ051">51 Martin </option> 
+						<option value="TXZ170">170 Mason</option> 
+						<option value="TXZ236">236 Matagorda</option> 
+						<option value="TXZ217">217 Maverick</option> 
+						<option value="TXZ154">154 McCulloch</option> 
+						<option value="TXZ159">159 McLennan </option> 
+						<option value="TXZ230">230 McMullen</option> 
+						<option value="TXZ204">204 Medina</option> 
+						<option value="TXZ168">168 Menard</option> 
+						<option value="TXZ062">62 Midland</option> 
+						<option value="TXZ174">174 Milam</option> 
+						<option value="TXZ142">142 Mills</option> 
+						<option value="TXZ053">53 Mitchell</option> 
+						<option value="TXZ091">91 Montague</option> 
+						<option value="TXZ199">199 Montgomery </option> 
+						<option value="TXZ007">7 Moore</option> 
+						<option value="TXZ111">111 Morris </option> 
+						<option value="TXZ031">31 Motley</option> 
+						<option value="TXZ152">152 Nacogdoches</option> 
+						<option value="TXZ146">146 Navarro</option> 
+						<option value="TXZ182">182 Newton</option> 
+						<option value="TXZ054">54 Nolan</option> 
+						<option value="TXZ243">243 Nueces</option> 
+						<option value="TXZ004">4 Ochiltree </option> 
+						<option value="TXZ011">11 Oldham</option> 
+						<option value="TXZ216">216 Orange </option> 
+						<option value="TXZ116">116 Palo Pinto</option> 
+						<option value="TXZ151">151 Panola</option> 
+						<option value="TXZ117">117 Parker</option> 
+						<option value="TXZ021">21 Parmer</option> 
+						<option value="TXZ075">75 Pecos</option> 
+						<option value="TXZ179">179 Polk</option> 
+						<option value="TXZ012">12 Potter</option> 
+						<option value="TXZ079">79 Presidio Valley, Extreme Western Presidio</option> 
+						<option value="TXZ123">123 Rains</option> 
+						<option value="TXZ017">17 Randall</option> 
+						<option value="TXZ070">70 Reagan</option> 
+						<option value="TXZ185">185 Real</option> 
+						<option value="TXZ096">96 Red River</option> 
+						<option value="TXZ058">58 Reeves County and Upper Trans Pecos / Except Extr SW / NE Culberson</option> 
+						<option value="TXZ246">246 Refugio </option> 
+						<option value="TXZ009">9 Roberts</option> 
+						<option value="TXZ175">175 Robertson</option> 
+						<option value="TXZ120">120 Rockwall</option> 
+						<option value="TXZ066">66 Runnels</option> 
+						<option value="TXZ150">150 Rusk</option> 
+						<option value="TXZ167">167 Sabine</option> 
+						<option value="TXZ166">166 San Augustine </option> 
+						<option value="TXZ178">178 San Jancinto</option> 
+						<option value="TXZ244">244 San Patricio</option> 
+						<option value="TXZ155">155 San Saba</option> 
+						<option value="TXZ077">77 Schleicher</option> 
+						<option value="TXZ048">48 Scurry </option> 
+						<option value="TXZ114">114 Shackelford</option> 
+						<option value="TXZ153">153 Shelby</option> 
+						<option value="TXZ002">2 Sherman</option> 
+						<option value="TXZ136">136 Smith</option> 
+						<option value="TXZ132">132 Somervell</option> 
+						<option value="TXZ252">252 Starr</option> 
+						<option value="TXZ115">115 Stephens</option> 
+						<option value="TXZ064">64 Sterling</option> 
+						<option value="TXZ044">44 Stonewall </option> 
+						<option value="TXZ078">78 Sutton</option> 
+						<option value="TXZ023">23 Swisher </option> 
+						<option value="TXZ118">118 Tarrant</option> 
+						<option value="TXZ127">127 Taylor </option> 
+						<option value="TXZ082">82 Terrell</option> 
+						<option value="TXZ040">40 Terry </option> 
+						<option value="TXZ099">99 Throckmorton</option> 
+						<option value="TXZ109">109 Titus</option> 
+						<option value="TXZ072">72 Tom Green</option> 
+						<option value="TXZ192">192 Travis</option> 
+						<option value="TXZ164">164 Trinity</option> 
+						<option value="TXZ180">180 Tyler</option> 
+						<option value="TXZ125">125 Upshur</option> 
+						<option value="TXZ069">69 Upton</option> 
+						<option value="TXZ203">203 Uvalde</option> 
+						<option value="TXZ183">183 Val Verde</option> 
+						<option value="TXZ057">57 Van Horn and Hwy 54 Corridor / Culberson / Except NE, Extr SE and Extr NE</option> 
+						<option value="TXZ122">122 Van Zandt</option> 
+						<option value="TXZ234">234 Victoria</option> 
+						<option value="TXZ177">177 Walker</option> 
+						<option value="TXZ212">212 Waller</option> 
+						<option value="TXZ067">67 Ward</option> 
+						<option value="TXZ197">197 Washington</option> 
+						<option value="TXZ239">239 Webb</option> 
+						<option value="TXZ226">226 Wharton</option> 
+						<option value="TXZ015">15 Wheeler</option> 
+						<option value="TXZ086">86 Wichita</option> 
+						<option value="TXZ085">85 Wilbarger </option> 
+						<option value="TXZ173">173 Williamson</option> 
+						<option value="TXZ221">221 Wilson</option> 
+						<option value="TXZ060">60 Winkler</option> 
+						<option value="TXZ102">102 Wise</option> 
+						<option value="TXZ124">124 Wood</option> 
+						<option value="TXZ039">39 Yoakum</option> 
+						<option value="TXZ100">100 Young</option> 
+						<option value="TXZ248">248 Zapata</option> 
+						<option value="TXZ218">218 Zavala</option> 
+					 </select> </p> </form> </td> 
+		  </tr> 
+		</tbody></table> </center> 
+</body></html>
