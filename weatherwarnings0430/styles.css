@@ -1,0 +1,51 @@
+#warning_type {
+	font-size: 24pt;
+	line-height: 36px;
+}
+
+#map {
+	width: 500px;
+	height: 314px;
+}
+
+
+#tableContainer table th, #tableContainer table td, #tableContainer table tr{
+       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+       border: 2px solid black;
+       padding: 5px;
+}
+
+#tableContainer table {
+      width: 80%;
+      align: center;
+}
+
+#table2 td {
+      padding: 5px;
+}
+
+#warning_type {
+  position: absolute;
+  top: -31px;
+  left: 1px;
+}
+
+#warning_type_values{
+  position: absolute;
+  top: 30px;
+  left: 1px;
+}
+
+#dates {
+  position: absolute;
+  bottom: 125px;
+  font-size: 22pt;
+}
+
+#date_values {
+  position: relative;
+  bottom: -10px;
+}
+
+
+  
