@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<p id="warning_type"> Warning type <p>
+	<form>
+  		<input type="radio" name="type" value="heat" checked> Heat<br>
+  		<input type="radio" name="type" value="wind"> Wind<br>
+  		<input type="radio" name="type" value="air_stagnation"> Air Stagnation<br>
+  		<input type="radio" name="type" value="cold"> Cold<br>
+	</form> 
+	<br>
+	<br>
+
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/NWS_Weather_Forecast_Offices.svg/2000px-NWS_Weather_Forecast_Offices.svg.png" id="map">
+
+	<br>
+	<br>
+
+	<form action="action_page.php">
+		From:<br>
+		<input type="date" name="from" min="2003-01-01"><br><br>
+		To:<br>
+		<input type="date" name="to" max="2013-12-31"><br><br>
+		<input type="submit"> 
+	</form>
+
+	<br>
+	<br>
+	                                       
+  	<div class="dropdown">
+    	<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">County
+    	<span class="caret"></span></button>
+    	<ul class="counties">
+      		<li><a href="#">County 1</a></li>
+      		<li><a href="#">County 2</a></li>
+      		<li><a href="#">County 3</a></li>
+    	</ul>
+  	</div>
+
+  	<br>
+  	<br>
+
+  	<table border="1" id="table" style="width:100%">
+  		<tr>
+    		<th>Date</th>
+    		<th>Warning</th>		
+    		<th>Text File</th>
+  		</tr>
+  		<tr>
+    		<td>06/01/13</td>
+    		<td>1</td> 
+    		<td><u>Download</u></td>
+  		</tr>
+  		<tr>
+    		<td>06/02/13</td>
+    		<td>0</td> 
+    		<td><u>Download</u></td>
+  		</tr>
+      <tr>
+        <td>06/02/13</td>
+        <td>1</td> 
+        <td><u>Download</u></td>
+      </tr>
+	</table>
+
+	<br>
+
+	<button type="button" id="export">Export as CSV</button>
+</body>
+</html>
