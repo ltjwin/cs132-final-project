@@ -14,7 +14,6 @@ function DisplaySites(string)   {
   var i, index;
   var zoneString, zoneNbr, preString, postString, totalString, editString;
   
-  
   zoneString = string.substring(3, 6);
   editString = string.substring(0, 6);
   i = parseInt(zoneString);
@@ -75,12 +74,27 @@ function DisplaySites(string)   {
   countyCode=totalString.substring(totalString.indexOf(":")+1);
   localStorage.setItem("countyCodeCookie", countyCode);
   localStorage.setItem("zone", zoneString + ' ' + ZoneName[zoneNbr]);
+  localStorage.setItem("displayTotal", 'Zone:' + zoneString+ ' ' + ZoneName[zoneNbr]); //added this line
   console.log("Inside Displaysites countyCode: " + countyCode);
+  
   // $('#countyCodeHidden').text(countyCode);
   // $('#countyCodeHidden').val(countyCode);
   // var par =document.getElementById('countyCodeHidden');
   // par.innerHTML = countyCode
-        
+  
+  // Ensure that drop down list selects a value when zone map is clicked
+  var stopIndex = totalString.indexOf(":");
+  var startIndex = 0;
+  while (totalString.substring(startIndex, startIndex+1) == " " ) { 
+        startIndex = startIndex + 1;
+  }
+  console.log(totalString.substring(startIndex, stopIndex));
+  var selectObj = document.DropDown1.Zones;
+  for (var i = 0; i < selectObj.options.length; i++) {
+        if (selectObj.options[i].text == totalString.substring(startIndex, stopIndex)) {
+            selectObj.options[i].selected = true;
+        }
+   }
 }
       
    
@@ -88,7 +102,6 @@ function DisplaySites(string)   {
 function DisplayStrings(flag)  {
   console.log("DisplayStrings : " + flag); 
   var zoneString, param1, param2, comma;
-
   if (flag == 1)
      zoneString = document.DropDown1.Zones.options[document.DropDown1.Zones.selectedIndex].value;
   // else
@@ -110,6 +123,7 @@ function DisplayStrings(flag)  {
       DisplaySites(param1, param2);
     }
   }
+  
 }
 
 var startdate, stopdate;
@@ -260,20 +274,20 @@ function createTable(datearray) {
                    cell1.innerHTML = "" + numberToMonth(month);
                  }
        	         else if (isValidDay(month, parseInt(i)) == false) {
-                   cell1.style.backgroundColor = "#A4A4A4";
+                   cell1.style.backgroundColor = "white"; //changed from #A4A4A4A4
                  }
                  else if (parseInt(month) === parseInt(startmonth % 12) && parseInt(i) < parseInt(startday) && currentyear == startyear) {
-                    cell1.style.backgroundColor = "#A4A4A4";
+                    cell1.style.backgroundColor = "white"; //changed from #A4A4A4A4
                  }
                  else if (parseInt(month) === parseInt(endmonth % 12) && parseInt(i) > parseInt(endday) && currentyear == endyear) {
-                    cell1.style.backgroundColor = "#A4A4A4";
+                    cell1.style.backgroundColor = "white"; //changed from #A4A4A4A4
                  }
                  else if (parseInt(month) > 3 || parseInt(month) < 11) {
                      if (parseInt(datearray[daycount]) == 1) {
-		         cell1.style.backgroundColor = "#5EFB6E";
+		         cell1.style.backgroundColor = "#5EFB6E"; //changed from red color
                      }
                      else {
-                         cell1.style.backgroundColor = "#1F45FC";
+                         cell1.style.backgroundColor = "#1F45FC"; //changed from different blue color
                      }
                      daycount++;
                 }
@@ -371,8 +385,11 @@ $(document).ready(function() {
             
             var date_regex = /^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
             
+            //changed all alerts to sweetAlert and changed ordering of conditionals
+            //first checks if start date and end date are valid, then checks if start date and end date are in the correct range
+            //finally it checks if start date is before end date
 	    if(!(date_regex.test(startDate))) {
-              sweetAlert("Please enter a valid start date");
+              sweetAlert("Please enter a valid start date"); //changed alert to sweetAlert
               return;
             }
 
@@ -400,7 +417,7 @@ $(document).ready(function() {
             datearray = new Array((parseInt(years) - 1) * 2);
                        
             countyCodeVar = localStorage.getItem("countyCodeCookie");
-            var zzone = localStorage.getItem("zone");
+            var zzone = localStorage.getItem("displayTotal"); //changed to displayTotal from previous value
             $('#location').text(zzone)
             $('#location').val(zzone)
             console.log("cookieValue: " + countyCodeVar);
@@ -437,6 +454,7 @@ $(document).ready(function() {
                   for (i = 0; i < data.length; i++) {
                     var date = data[i].date;
                     var warning = data[i].warning;
+                    //get current month to ensure that heatmap only displays warnings from april to october
                     var curdate = date.split("-");
                     var curmonth = curdate[1];
                     if (parseInt(curmonth) > 3 && parseInt(curmonth) < 11) {
@@ -466,7 +484,7 @@ $(document).ready(function() {
                     
                       var td3 = document.createElement('td');
                       var button = document.createElement('button');
-                      button.className = "btn btn-primary center-block";
+                      button.className = "btn btn-primary center-block"; //added to ensure that buttons in table match other buttons
                       var textN = document.createTextNode("Show Source Text");
                       button.appendChild(textN);
                       button.id = "text" + i;
@@ -500,6 +518,8 @@ $(document).ready(function() {
                       //console.log(newRow[2]);
                       csvArray.push(newRow);
                   }
+
+                // Create divison and store heat map inside
                 var tablediv = document.createElement("div");
                 tablediv.id = 'tableContainer';
                 document.body.appendChild(tablediv);
@@ -513,6 +533,7 @@ $(document).ready(function() {
                 daycount = 0;
                 datearray = [];               
                 tableCreated = 1;
+
                   callback();
                 } else {
                   console.log('Something went wrong, check the request status');
