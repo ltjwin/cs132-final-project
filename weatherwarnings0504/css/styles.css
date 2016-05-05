@@ -1,0 +1,71 @@
+#warning_type {
+	font-size: 24pt;
+	line-height: 36px;
+}
+
+#map {
+	width: 500px;
+	height: 314px;
+}
+
+#tableContainer table th, #tableContainer table td, #tableContainer table tr{
+       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+       border: 2px solid black;
+       padding: 5px;
+}
+
+
+#tableContainer table {
+      width: 80%;
+      align: center;
+}
+
+#table2 td {
+      padding: 5px;
+}
+
+#warning_type {
+  position: absolute;
+  float: left;
+  top: -31px;
+  left: 20px;
+  text-align: right;
+}
+
+#warning_type_values{
+  position: absolute;
+  float: left;
+  top: 30px;
+  left: 20px;
+}
+
+
+#dates {
+  position: relative;
+  float: right;
+  bottom: 40px;
+  right: 180px;
+  font-size: 22pt;
+  text-align: right;
+}
+
+#date_values {
+  position: relative;
+  float: right;
+  bottom: -10px;
+  text-align: right;
+}
+
+#table2 tr, #table2 td, #table2 th{
+  border: 0.5px solid #000000;
+}
+
+.showSourceText {
+  background-color: #C0C0C0;
+  color: #000000;
+  border-color: #787878;
+}
+
+
+
+  
