@@ -7,6 +7,7 @@ StatusBarLocked = 0;
 var countyCode = -1;
 var warningType;
 var countyCodeVar;
+var sourceTexts = {};
 
 function DisplaySites(string) {
     //console.log("DisplaySites function");
@@ -305,6 +306,7 @@ var datearray, tableCreated = 0;
 //window.addEventListener('load', function() {
 //$( window ).load(function() {  
 $(document).ready(function() {
+ 
     var csvArray;
     $('.state').click(function(event) {
         event.preventDefault();
@@ -499,7 +501,8 @@ $(document).ready(function() {
 		    
 		    //localStorage.setItem("zone", zoneString + ' ' + ZoneName[zoneNbr]);
 		    //localStorage.setItem("displayTotal", 'Zone:' + zoneString + ' ' + ZoneName[zoneNbr]);
-                    localStorage.setItem("text" + i, text);
+                    //localStorage.setItem("text" + i, text);
+                    sourceTexts["text"+i] = text;
         
                     var table = document.getElementById('table2');
         
@@ -524,7 +527,8 @@ $(document).ready(function() {
         
                         button.onclick = function() {
                             //console.log("this id: " + this.id);
-                            sweetAlert(localStorage.getItem(this.id));
+                            //sweetAlert(localStorage.getItem(this.id));
+                            sweetAlert(sourceTexts[this.id]);
 			    //localStorage.removeItem(this.id);
 
                         };
@@ -616,6 +620,7 @@ $(document).ready(function() {
         });
         if (csv == null) return;
         filename = String(countyCodeVar) + '/' + String(warningType) + '/' + 'export.csv';
+	console.log("filename: " + filename);
 
         if (!csv.match(/^data:text\/csv/i)) {
             csv = 'data:text/csv;charset=utf-8,' + csv;
