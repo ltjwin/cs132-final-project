@@ -321,7 +321,10 @@ $(document).ready(function() {
     });
 
     var submitButton = $('#submitButtonID2')[0];
-    submitButton.addEventListener('click', sendQuery, false);
+    if (submitButton!==undefined){
+        submitButton.addEventListener('click', sendQuery, false);
+    }
+    //submitButton.addEventListener('click', sendQuery, false);
 
 
     function myFunction(text) {
@@ -329,7 +332,8 @@ $(document).ready(function() {
     }
 
     function sendQuery() {
-
+        
+        sourceTexts = {};
         csvArray = [];
 
         $("#table2").find("tr:gt(0)").remove();
@@ -575,8 +579,9 @@ $(document).ready(function() {
 
     var exportButton = $('#export')[0];
     //console.log(countyCode);
-    exportButton.addEventListener('click', download, false);
-
+    if (exportButton!==undefined){
+        exportButton.addEventListener('click', download, false);
+    }
     function download() {
         downloadCSV({
             filename: csvArray.csv
@@ -686,7 +691,12 @@ $(document).ready(function() {
     $(window).resize(function() {
         $(".sweet-alert").css("margin-top", -$(".sweet-alert").outerHeight() / 2);
     });
-
-    var dropdownlist = $("#dropdown").data("kendoDropDownList");
-    dropdownlist.list.width("auto");
+    if($("#dropdown")!==undefined){
+        var dropdownlist = $("#dropdown").data("kendoDropDownList");
+        if (dropdownlist !== undefined){
+            dropdownlist.list.width("auto");
+        }
+    }
+   // var dropdownlist = $("#dropdown").data("kendoDropDownList");
+   // dropdownlist.list.width("auto");
 });
