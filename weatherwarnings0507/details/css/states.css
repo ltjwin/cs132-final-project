@@ -1,0 +1,6 @@
+select {
+    width: 200px; /* Or whatever width you want. */
+}
+select.expand {
+    width: auto;
+}
